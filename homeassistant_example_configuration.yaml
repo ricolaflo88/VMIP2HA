@@ -15,3 +15,6 @@ enocran_vmi:
     - name: VMI
       sender: 0421574F
       profile: D1079
+    - name: Bypass_VMI
+      sender: 56974C25
+      profile: D2_01_12
