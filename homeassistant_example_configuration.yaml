@@ -1,0 +1,17 @@
+enocran_vmi:
+  device_file: /config/enoceanmqtt.devices
+  serial_port: /dev/ttyS2
+  baudrate: 57600
+  devices:
+    - name: Sensor/C02_VMI
+      sender: 81003227
+      profile: A5_09_04
+    - name: Sensor/SDB_VMI
+      sender: 810054F5
+      profile: A5_04_01
+    - name: Sensor/T_VMI
+      sender: 0422407D
+      profile: D1_07_09
+    - name: VMI
+      sender: 0421574F
+      profile: D1079

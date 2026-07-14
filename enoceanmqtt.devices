@@ -1,0 +1,29 @@
+[Sensor/C02_VMI]
+address         = 0x81003227
+rorg            = 0xA5
+func            = 0x09
+type            = 0x04
+
+[Sensor/SDB_VMI]
+address         = 0x810054F5
+rorg            = 0xA5
+func            = 0x04
+type            = 0x01
+
+[Sensor/T_VMI]
+address         = 0x0422407D
+rorg            = 0xD1
+func            = 0x07
+type            = 0x09
+
+[VMI]
+address         = 0x0421574F
+rorg            = 0xD1
+func            = 0x01
+type            = 0x00
+
+[BYPASS]
+address         = 0x05974C25
+rorg            = 0xD2
+func            = 0x01
+type            = 0x12

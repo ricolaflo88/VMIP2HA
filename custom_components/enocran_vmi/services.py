@@ -1,7 +1,12 @@
 import logging
+from types import SimpleNamespace
 
 import voluptuous as vol
-from homeassistant.helpers import config_validation as cv
+
+try:
+    from homeassistant.helpers import config_validation as cv
+except ImportError:  # pragma: no cover - used for local test execution
+    cv = SimpleNamespace(string=str, positive_int=int, ensure_list=lambda value: value if isinstance(value, list) else [value])
 
 from .const import (
     ATTR_AGENDA,

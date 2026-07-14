@@ -1,0 +1,590 @@
+# Author: Marc Alexandre K. <marcalexandrek-developer@yahoo.fr>
+
+# Mapping of EEPs to Home Assistant Entities
+0xD2:
+  0x01:
+    0x12: &D20112
+      device_config:
+        command: "CMD"
+        channel: "IO/CMD"
+        log_learn: ""
+        direction: ""
+        answer: ""
+      entities:
+      - component: "light"
+        name: "IO0"
+        config:
+          schema: "template"
+          state_topic: "IO0/CMD4"
+          state_template: >-
+            {% if value_json.OV == 0 %}off{% else %}on{% endif %}
+          command_topic: "req"
+          command_on_template: >-
+            {"CMD":"1","DV":"0","IO":"0","OV":"100","send":"clear"}
+          command_off_template: >-
+            {"CMD":"1","DV":"0","IO":"0","OV":"0","send":"clear"}
+      - component: "button"
+        name: "query_status_IO0"
+        config:
+          command_topic: "req"
+          payload_press: >-
+            {"CMD":"3","IO":"0","send":"clear"}
+      - component: binary_sensor
+        name: "IO0_LC"
+        config:
+          state_topic: "IO0/CMD4"
+          payload_on: "on"
+          payload_off: "off"
+          value_template: >-
+            {% if value_json.LC == 1 %}on{% else %}off{% endif %}
+      - component: "light"
+        name: "IO1"
+        config:
+          schema: "template"
+          state_topic: "IO1/CMD4"
+          state_template: >-
+            {% if value_json.OV == 0 %}off{% else %}on{% endif %}
+          command_topic: "req"
+          command_on_template: >-
+            {"CMD":"1","DV":"0","IO":"1","OV":"100","send":"clear"}
+          command_off_template: >-
+            {"CMD":"1","DV":"0","IO":"1","OV":"0","send":"clear"}
+      - component: "button"
+        name: "query_status_IO1"
+        config:
+          command_topic: "req"
+          payload_press: >-
+            {"CMD":"3","IO":"1","send":"clear"}
+      - component: binary_sensor
+        name: "IO1_LC"
+        config:
+          state_topic: "IO1/CMD4"
+          payload_on: "on"
+          payload_off: "off"
+          value_template: >-
+            {% if value_json.LC == 1 %}on{% else %}off{% endif %}
+      - component: "button"
+        name: "query_status_all"
+        config:
+          command_topic: "req"
+          payload_press: >-
+            {"CMD":"3","IO":"30","send":"clear"}
+0xA5:
+   0x04:
+      0x01:
+         device_config:
+            command: ""
+            channel: ""
+            log_learn: ""
+            direction: ""
+            answer: ""
+         entities:
+            - component: "sensor"
+              name: "hum"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.HUM | round(1) }}"
+                 device_class: "humidity"
+                 state_class: "measurement"
+                 unit_of_measurement: "%"
+            - component: "sensor"
+              name: "tempC"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.TMP | round(1) }}"
+                 device_class: "temperature"
+                 state_class: "measurement"
+                 unit_of_measurement: "°C"
+            - component: binary_sensor
+              name: "status"
+              config:
+                 state_topic: ""
+                 value_template: >-
+                   {% if value_json.TSN == 0 %}OFF{% else %}ON{% endif %}
+   0x09:
+      0x04:
+         device_config:
+            command: ""
+            channel: ""
+            log_learn: ""
+            direction: ""
+            answer: ""
+         entities:
+            - component: "sensor"
+              name: "humidity"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.HUM | round(1) }}"
+                 device_class: "humidity"
+                 state_class: "measurement"
+                 unit_of_measurement: "%"
+            - component: "sensor"
+              name: "concentration"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.Conc }}"
+                 device_class: "carbon_dioxide"
+                 state_class: "measurement"
+                 unit_of_measurement: "ppm"
+            - component: "sensor"
+              name: "temperature"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.TMP | round(1) }}"
+                 device_class: "temperature"
+                 state_class: "measurement"
+                 unit_of_measurement: "°C"
+            - component: binary_sensor
+              name: "HSN"
+              config:
+                 state_topic: ""
+                 value_template: >-
+                   {% if value_json.HSN == 0 %}OFF{% else %}ON{% endif %}
+            - component: binary_sensor
+              name: "TSN"
+              config:
+                 state_topic: ""
+                 value_template: >-
+                   {% if value_json.TSN == 0 %}OFF{% else %}ON{% endif %}
+0xd1:
+  0x07:
+    0x09:
+      device_config:
+        command: "CMD"
+        channel: "CMD"
+        log_learn: "1"
+        direction: "both"
+        answer: ""
+      entities:
+        - component: "sensor" # Température (toutes commandes confondues)
+          name: "temperature"
+          config:
+            state_topic: "CMD1"
+            value_template: "{{ value_json.TEMP | round(1) }}"
+            device_class: "temperature"
+            state_class: "measurement"
+            unit_of_measurement: "°C"
+        - component: "sensor" # Humidité (toutes commandes confondues)
+          name: "humidity"
+          config:
+            state_topic: "CMD1"
+            value_template: "{{ value_json.HUM | round(1) }}"
+            device_class: "humidity"
+            state_class: "measurement"
+            unit_of_measurement: "%"
+        - component: "sensor" # Batterie (toutes commandes confondues)
+          name: "battery"
+          config:
+            state_topic: "CMD1"
+            value_template: "{{ value_json.BATT }}"
+            device_class: "battery"
+            state_class: "measurement"
+            unit_of_measurement: "%"
+        - component: "sensor" # Température (toutes commandes confondues)
+          name: "temperature"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.TEMP | round(1) }}"
+            device_class: "temperature"
+            state_class: "measurement"
+            unit_of_measurement: "°C"
+        - component: "sensor" # Humidité (toutes commandes confondues)
+          name: "humidity"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.HUM | round(1) }}"
+            device_class: "humidity"
+            state_class: "measurement"
+            unit_of_measurement: "%"
+        - component: "sensor" # Batterie (toutes commandes confondues)
+          name: "battery"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.BATT }}"
+            device_class: "battery"
+            state_class: "measurement"
+            unit_of_measurement: "%"
+#        - component: "sensor" # Debug brut (optionnel)
+#          name: "TVMI_debug_raw"
+#          config:
+#            state_topic: "CMD1"
+#            value_template: "{{ value_json._RAW_DATA_ }}"
+  0x04:
+     0x01:
+         device_config:
+            command: ""
+            channel: ""
+            log_learn: "1"
+            direction: ""
+            answer: ""
+         entities:
+            - component: "sensor"
+              name: "hum"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.HUM | round(1) }}"
+                 device_class: "humidity"
+                 state_class: "measurement"
+                 unit_of_measurement: "%"
+            - component: "sensor"
+              name: "tempC"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.TMP | round(1) }}"
+                 device_class: "temperature"
+                 state_class: "measurement"
+                 unit_of_measurement: "°C"
+            - component: binary_sensor
+              name: "status"
+              config:
+                 state_topic: ""
+                 value_template: >-
+                   {% if value_json.TSN == 0 %}OFF{% else %}ON{% endif %}
+  0x09:
+      0x04:
+         device_config:
+            command: ""
+            channel: ""
+            log_learn: "1"
+            direction: ""
+            answer: ""
+         entities:
+            - component: "sensor"
+              name: "humidity"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.HUM | round(1) }}"
+                 device_class: "humidity"
+                 state_class: "measurement"
+                 unit_of_measurement: "%"
+            - component: "sensor"
+              name: "concentration"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.Conc }}"
+                 device_class: "carbon_dioxide"
+                 state_class: "measurement"
+                 unit_of_measurement: "ppm"
+            - component: "sensor"
+              name: "temperature"
+              config:
+                 state_topic: ""
+                 value_template: "{{ value_json.TMP | round(1) }}"
+                 device_class: "temperature"
+                 state_class: "measurement"
+                 unit_of_measurement: "°C"
+            - component: binary_sensor
+              name: "HSN"
+              config:
+                 state_topic: ""
+                 value_template: >-
+                   {% if value_json.HSN == 0 %}OFF{% else %}ON{% endif %}
+            - component: binary_sensor
+              name: "TSN"
+              config:
+                 state_topic: ""
+                 value_template: >-
+                   {% if value_json.TSN == 0 %}OFF{% else %}ON{% endif %}
+  0x01:
+    0x00:
+      device_config:
+        command: "CMD"
+        channel: "CMD"
+        log_learn: "1"
+        direction: "both"
+        answer: ""
+      entities:
+        - component: "sensor" # === Command 0 : Données courantes ===
+          name: "MF_mode"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.MF }}"
+        - component: "sensor"
+          name: "bypass"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.BYP }}"
+        - component: "sensor"
+          name: "plage_horaire"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.PLH }}"
+        - component: "sensor"
+          name: "boost"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.BOOS }}"
+        - component: "sensor"
+          name: "temperature_consigne_elec"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.TEMPCELEC }}"
+            unit_of_measurement: "°C"
+        - component: "sensor" # === Command 1 : Données courantes complément 1 ===
+          name: "debit_air_sortant"
+          config:
+            state_topic: "CMD1"
+            value_template: "{{ value_json.DEBAS }}"
+            unit_of_measurement: "m³/h"
+        - component: "sensor"
+          name: "puissance_chauffage"
+          config:
+            state_topic: "CMD1"
+            value_template: "{{ value_json.PCHAUFF }}"
+            unit_of_measurement: "%"
+        - component: "sensor" # === Command 2 : Données courantes complément 2 ===
+          name: "temperature_exterieure"
+          config:
+            state_topic: "CMD2"
+            value_template: "{{ value_json.TEMPEXT }}"
+            unit_of_measurement: "°C"
+        - component: "sensor"
+          name: "indice_filtre"
+          config:
+            state_topic: "CMD2"
+            value_template: "{{ value_json.IEFIL }}"
+            unit_of_measurement: "%"
+        - component: "sensor" # === Command 3 : États de maintenance ===
+          name: "test_global"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.TGLOB }}"
+        - component: "sensor"
+          name: "code_err1"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.CERR1 }}"
+        - component: "sensor"
+          name: "nb_semaines_depuis_maintenance"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.NBSDMAINT }}"
+        - component: "sensor" # === Command 4 : Configuration de la machine ===
+          name: "type_caisson"
+          config:
+            state_topic: "CMD4"
+            value_template: "{{ value_json.TYPCAI }}"
+        - component: "sensor"
+          name: "volume_a_ventiler"
+          config:
+            state_topic: "CMD4"
+            value_template: "{{ value_json.VVENT }}"
+            unit_of_measurement: "m³"
+        - component: "sensor" # === Command 5 et 6 : État sondes internes ===
+          name: "temperature_sonde0"
+          config:
+            state_topic: "CMD5"
+            value_template: "{{ value_json.TEMP0 }}"
+            unit_of_measurement: "°C"
+        - component: "sensor"
+          name: "humidite_sonde0"
+          config:
+            state_topic: "CMD5"
+            value_template: "{{ value_json.HUM0 }}"
+            unit_of_measurement: "%"
+        - component: "sensor"
+          name: "temperature_sonde3"
+          config:
+            state_topic: "CMD6"
+            value_template: "{{ value_json.TEMP3 }}"
+            unit_of_measurement: "°C"
+        - component: "sensor" # === Command 7 : État options (bypass / HydroR) ===
+          name: "ouverture_bypass1"
+          config:
+            state_topic: "CMD7"
+            value_template: "{{ value_json.OUVBY1 }}"
+            unit_of_measurement: "%"
+        - component: "sensor"
+          name: "ouverture_vanne_hydror"
+          config:
+            state_topic: "CMD7"
+            value_template: "{{ value_json.OUVHYDR }}"
+            unit_of_measurement: "%"
+        - component: "sensor" # === Command 8 : Capteurs appairés ===
+          name: "id_capteur"
+          config:
+            state_topic: "CMD8"
+            value_template: "{{ value_json.IDAPP }}"
+        - component: "sensor"
+          name: "piece_capteur"
+          config:
+            state_topic: "CMD8"
+            value_template: "{{ value_json.PIECEAPP }}"
+        - component: "sensor"
+          name: "profil_capteur"
+          config:
+            state_topic: "CMD8"
+            value_template: "{{ value_json.PROFAPP }}"
+0x40:
+  0x01:
+    0x00:
+      device_config:
+        command: "CMD"
+        channel: "CMD"
+        log_learn: "1"
+        direction: "both"
+        answer: ""
+      entities:
+        - component: "sensor" # === Command 0 : Données courantes ===
+          name: "MF_mode"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.MF }}"
+        - component: "sensor"
+          name: "bypass"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.BYP }}"
+        - component: "sensor"
+          name: "plage_horaire"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.PLH }}"
+        - component: "sensor"
+          name: "boost"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.BOOS }}"
+        - component: "sensor"
+          name: "temperature_consigne_elec"
+          config:
+            state_topic: "CMD0"
+            value_template: "{{ value_json.TEMPCELEC }}"
+            unit_of_measurement: "°C"
+        - component: "sensor" # === Command 1 : Données courantes complément 1 ===
+          name: "debit_air_sortant"
+          config:
+            state_topic: "CMD1"
+            value_template: "{{ value_json.DEBAS }}"
+            unit_of_measurement: "m³/h"
+        - component: "sensor"
+          name: "puissance_chauffage"
+          config:
+            state_topic: "CMD1"
+            value_template: "{{ value_json.PCHAUFF }}"
+            unit_of_measurement: "%"
+        - component: "sensor" # === Command 2 : Données courantes complément 2 ===
+          name: "temperature_exterieure"
+          config:
+            state_topic: "CMD2"
+            value_template: "{{ value_json.TEMPEXT }}"
+            unit_of_measurement: "°C"
+        - component: "sensor"
+          name: "indice_filtre"
+          config:
+            state_topic: "CMD2"
+            value_template: "{{ value_json.IEFIL }}"
+            unit_of_measurement: "%"
+        - component: "sensor" # === Command 3 : États de maintenance ===
+          name: "test_global"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.TGLOB }}"
+        - component: "sensor"
+          name: "code_err1"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.CERR1 }}"
+        - component: "sensor"
+          name: "nb_semaines_depuis_maintenance"
+          config:
+            state_topic: "CMD3"
+            value_template: "{{ value_json.NBSDMAINT }}"
+        - component: "sensor" # === Command 4 : Configuration de la machine ===
+          name: "type_caisson"
+          config:
+            state_topic: "CMD4"
+            value_template: "{{ value_json.TYPCAI }}"
+        - component: "sensor"
+          name: "volume_a_ventiler"
+          config:
+            state_topic: "CMD4"
+            value_template: "{{ value_json.VVENT }}"
+            unit_of_measurement: "m³"
+        - component: "sensor" # === Command 5 et 6 : État sondes internes ===
+          name: "temperature_sonde0"
+          config:
+            state_topic: "CMD5"
+            value_template: "{{ value_json.TEMP0 }}"
+            unit_of_measurement: "°C"
+        - component: "sensor"
+          name: "humidite_sonde0"
+          config:
+            state_topic: "CMD5"
+            value_template: "{{ value_json.HUM0 }}"
+            unit_of_measurement: "%"
+        - component: "sensor"
+          name: "temperature_sonde3"
+          config:
+            state_topic: "CMD6"
+            value_template: "{{ value_json.TEMP3 }}"
+            unit_of_measurement: "°C"
+        - component: "sensor" # === Command 7 : État options (bypass / HydroR) ===
+          name: "ouverture_bypass1"
+          config:
+            state_topic: "CMD7"
+            value_template: "{{ value_json.OUVBY1 }}"
+            unit_of_measurement: "%"
+        - component: "sensor"
+          name: "ouverture_vanne_hydror"
+          config:
+            state_topic: "CMD7"
+            value_template: "{{ value_json.OUVHYDR }}"
+            unit_of_measurement: "%"
+        - component: "sensor" # === Command 8 : Capteurs appairés ===
+          name: "id_capteur"
+          config:
+            state_topic: "CMD8"
+            value_template: "{{ value_json.IDAPP }}"
+        - component: "sensor"
+          name: "piece_capteur"
+          config:
+            state_topic: "CMD8"
+            value_template: "{{ value_json.PIECEAPP }}"
+        - component: "sensor"
+          name: "profil_capteur"
+          config:
+            state_topic: "CMD8"
+            value_template: "{{ value_json.PROFAPP }}"
+# Below are mappings common to all EEPs
+common:
+   rssi:
+      - component: "sensor"
+        name: "rssi"
+        config:
+           state_topic: ""
+           value_template: "{{ value_json._RSSI_ }}"
+           unit_of_measurement: "dBm"
+           device_class: "signal_strength"
+           state_class: "measurement"
+           entity_category: "diagnostic"
+   date:
+      - component: "sensor"
+        name: "last_seen"
+        config:
+           state_topic: ""
+           value_template: >-
+             {{ value_json._DATE_|regex_replace(find='\..*$', replace='')|as_datetime()|as_local() }}
+           device_class: "timestamp"
+           entity_category: "diagnostic"
+
+# Mapping for system purpose (HA <-> enoceanmqtt configurations)
+system:
+   delete:
+      - system: "True"
+        component: "button"
+        name: "delete"
+        config:
+           command_topic: "__system"
+           payload_press: "delete"
+           icon: "mdi:delete"
+           entity_category: "config"
+   learn:
+      - system: "True"
+        component: "switch"
+        name: "ENOCEAN_LEARN"
+        config:
+           state_topic: "learn"
+           command_topic: "learn/req"
+           icon: "mdi:home-plus"
+           entity_category: "config"

@@ -1,19 +1,37 @@
 import binascii
+import configparser
+import json
 import logging
 import threading
 import time
+from pathlib import Path
 
 import serial
 
 from .const import (
+    ATTR_AGENDA,
+    ATTR_BOOST,
     ATTR_BATTERY,
+    ATTR_COMMAND,
+    ATTR_COMMAND_TYPE,
     ATTR_CO2,
+    ATTR_DESTINATION,
+    ATTR_FONC,
+    ATTR_HOUR,
     ATTR_HUMIDITY,
+    ATTR_MODEFONC,
+    ATTR_RAW,
+    ATTR_SENDER,
     ATTR_SIGNAL_STRENGTH,
     ATTR_TEMPERATURE,
+    ATTR_TEMPEL,
+    ATTR_TEMPHYD,
+    ATTR_TEMPSOL,
+    ATTR_TEMPSOUF,
+    ATTR_VACS,
+    CONF_DEVICE_NAME,
     CONF_DEVICE_PROFILE,
     CONF_DEVICE_SENDER,
-    CONF_DEVICE_NAME,
     DOMAIN,
 )
 
@@ -63,6 +81,139 @@ def _bits_to_int(bits):
     return value
 
 
+def load_devices_from_file(path):
+    parsed = []
+    if not path:
+        return parsed
+
+    device_file = Path(path)
+    if not device_file.exists():
+        return parsed
+
+    config = configparser.ConfigParser()
+    config.read(device_file)
+
+    for section in config.sections():
+        try:
+            address = int(config.get(section, "address"), 16)
+        except Exception:
+            continue
+        sender_hex = f"{address:08X}"
+
+        rorg = config.get(section, "rorg", fallback="")
+        func = config.get(section, "func", fallback="")
+        typ = config.get(section, "type", fallback="")
+
+        profile = None
+        if rorg and func and typ:
+            profile = _profile_from_rorg_func_type(rorg, func, typ)
+
+        parsed.append(
+            {
+                "name": section,
+                "sender": sender_hex,
+                "profile": profile or "D1079",
+            }
+        )
+
+    return parsed
+
+
+def _profile_from_rorg_func_type(rorg, func, typ):
+    rorg = rorg.lower().replace("0x", "")
+    func = func.lower().replace("0x", "")
+    typ = typ.lower().replace("0x", "")
+
+    if rorg == "a5" and func == "04" and typ == "01":
+        return "A5_04_01"
+    if rorg == "a5" and func == "09" and typ == "04":
+        return "A5_09_04"
+    if rorg == "d1" and func == "07" and typ == "09":
+        return "D1_07_09"
+    return "D1079"
+
+
+def _coerce_payload(payload):
+    if isinstance(payload, str):
+        try:
+            return json.loads(payload)
+        except Exception:
+            return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def _normalized_payload(payload):
+    normalized = {}
+    for key, value in payload.items():
+        if isinstance(key, str):
+            normalized[key.lower()] = value
+    return normalized
+
+
+def build_updates_from_mqtt_payload(topic, payload):
+    updates = {}
+    payload = _coerce_payload(payload)
+    if not isinstance(payload, dict):
+        return updates
+
+    payload_map = _normalized_payload(payload)
+    topic = topic or ""
+    normalized_topic = topic.lower()
+
+    if "sensor/c02_vmi" in normalized_topic or "sensor/sdb_vmi" in normalized_topic:
+        if "hum" in payload_map:
+            updates[ATTR_HUMIDITY] = float(payload_map["hum"])
+        if "tmp" in payload_map:
+            updates[ATTR_TEMPERATURE] = float(payload_map["tmp"])
+        if "conc" in payload_map:
+            updates[ATTR_CO2] = float(payload_map["conc"])
+        if "tsn" in payload_map:
+            updates["tsn"] = int(payload_map["tsn"])
+        if "hsn" in payload_map:
+            updates["hsn"] = int(payload_map["hsn"])
+        return updates
+
+    if "sensor/t_vmi" in normalized_topic:
+        if "batt" in payload_map:
+            updates[ATTR_BATTERY] = int(payload_map["batt"])
+        if "temp" in payload_map:
+            updates[ATTR_TEMPERATURE] = float(payload_map["temp"])
+        if "hum" in payload_map:
+            updates[ATTR_HUMIDITY] = float(payload_map["hum"])
+        return updates
+
+    if "vmi" in normalized_topic and "cmd" in normalized_topic:
+        if "debas" in payload_map:
+            updates["debas"] = float(payload_map["debas"])
+        if "pchauff" in payload_map:
+            updates["pchauff"] = float(payload_map["pchauff"])
+        if "etats" in payload_map:
+            updates["etats"] = int(payload_map["etats"])
+        if "cvitm" in payload_map:
+            updates["cvitm"] = int(payload_map["cvitm"])
+        if "tempext" in payload_map:
+            updates["tempext"] = float(payload_map["tempext"])
+        if "cpdiff" in payload_map:
+            updates["cpdiff"] = float(payload_map["cpdiff"])
+        if "iefil" in payload_map:
+            updates["iefil"] = float(payload_map["iefil"])
+        if "rcbeau" in payload_map:
+            updates["rcbeau"] = float(payload_map["rcbeau"])
+        if "dfonc" in payload_map:
+            updates["dfonc"] = float(payload_map["dfonc"])
+        if "idapp" in payload_map:
+            updates["idapp"] = float(payload_map["idapp"])
+        if "pieceapp" in payload_map:
+            updates["pieceapp"] = int(payload_map["pieceapp"])
+        if "profapp" in payload_map:
+            updates["profapp"] = int(payload_map["profapp"])
+        if "captindex" in payload_map:
+            updates["captindex"] = int(payload_map["captindex"])
+        return updates
+
+    return updates
+
+
 class EnOceanHub:
     def __init__(self, hass, serial_port, baudrate, devices):
         self.hass = hass
@@ -78,6 +229,8 @@ class EnOceanHub:
         self._last_command = None
 
         for device in devices:
+            if not device:
+                continue
             sender_hex = _normalize_hex(device[CONF_DEVICE_SENDER])
             self._device_configs[sender_hex] = {
                 CONF_DEVICE_NAME: device[CONF_DEVICE_NAME],
@@ -85,12 +238,26 @@ class EnOceanHub:
                 "destination": device.get("destination"),
             }
 
-    def start(self):
+    async def async_setup_mqtt(self):
         try:
-            self._serial = serial.Serial(self.serial_port, self.baudrate, timeout=1)
-        except Exception as err:
-            _LOGGER.error("Unable to open serial port %s: %s", self.serial_port, err)
+            from homeassistant.components import mqtt
+        except ImportError:
+            _LOGGER.debug("MQTT integration is not available in this Home Assistant build")
             return
+
+        topic = "enoceanmqtt/#"
+        try:
+            await mqtt.async_subscribe(self.hass, topic, self._handle_mqtt_message)
+        except Exception as err:
+            _LOGGER.debug("Unable to subscribe to MQTT topic %s: %s", topic, err)
+
+    def start(self):
+        if self.serial_port:
+            try:
+                self._serial = serial.Serial(self.serial_port, self.baudrate, timeout=1)
+            except Exception as err:
+                _LOGGER.error("Unable to open serial port %s: %s", self.serial_port, err)
+                return
 
         self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
@@ -214,6 +381,40 @@ class EnOceanHub:
         if len(updates) > 1:
             self._states.setdefault(sender, {}).update(updates)
             self._dispatch(sender, updates)
+
+    def _handle_mqtt_message(self, msg):
+        try:
+            topic = getattr(msg, "topic", "")
+            payload = getattr(msg, "payload", "")
+        except Exception:
+            topic = ""
+            payload = ""
+
+        self._handle_mqtt_payload(topic, payload)
+
+    def _handle_mqtt_payload(self, topic, payload):
+        updates = build_updates_from_mqtt_payload(topic, payload)
+        if not updates:
+            return
+
+        sender = None
+        for device in self._device_configs.values():
+            device_name = (device.get(CONF_DEVICE_NAME) or "").lower()
+            topic_name = (topic or "").lower()
+            if device_name and device_name in topic_name:
+                sender = next((key for key, value in self._device_configs.items() if value is device), None)
+                break
+
+        if sender is None:
+            return
+
+        if isinstance(payload, dict):
+            rssi = payload.get("_RSSI_")
+            if rssi is not None:
+                updates[ATTR_SIGNAL_STRENGTH] = int(rssi)
+
+        self._states.setdefault(sender, {}).update(updates)
+        self._dispatch(sender, updates)
 
     def _parse_a5_payload(self, payload, profile):
         if len(payload) != 4:
