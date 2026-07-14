@@ -1,0 +1,146 @@
+{
+    "recepteur_dimmer": {
+        "name": "Récepteur Dimmer",
+        "groupe" : "[Télécommande] Récepteurs",
+        "configuration": {
+            "rorg": "a5",
+            "func": "38",
+            "type": "08"
+        },
+        "commands": [
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "LIGHT_STATE"
+                },
+                "logicalId": "EDIM::value",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "%",
+                "configuration": {
+                    "maxValue": 100,
+                    "minValue": 0
+                }
+            },
+            {
+                "name": "Intensité",
+                "type": "action",
+                "subtype": "slider",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "value" : "Etat",
+                "logicalId": "generic:1,command:2,EDIM:#slider#,SW:1",
+                "configuration": {
+                    "updateCmdId": "Etat",
+                    "updateCmdToValue": "#slider#"
+                },
+                "display": {
+                    "generic_type": "LIGHT_SLIDER"
+                },
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "On",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_ON"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "value" : "Etat",
+                "logicalId": "generic:1,command:2,EDIM:100,SW:1",
+                "configuration": {
+                    "updateCmdId": "Etat",
+                    "updateCmdToValue": "100"
+                }
+            },
+            {
+                "name": "Off",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_OFF"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "value" : "Etat",
+                "logicalId": "generic:1,command:2,EDIM:0,SW:0",
+                "configuration": {
+                    "updateCmdId": "Etat",
+                    "updateCmdToValue": "0"
+                }
+            },
+            {
+                "name": "Learn",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "logicalId": "generic:1,command:2,learn:1"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur radio télévariateur universel sans neutre - FUD61NP-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FUD61NP-230V",
+                "comlink": "2424-eltako-actionneur-radio-variateur-rlc-encastrable-sans-neutre-4010312300183",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant. Le module envoit son état 1 seconde après la fin du changement",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn sur la position 2 puis cliquez sur tester sur la commande learn de Jeedom",
+                "imglink": "recepteur_dimmer_eltako_dimmer_sans_neutre"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Variateur pour ballasts électroniques 1-10V",
+                "doc": "",
+                "type": "Ballast",
+                "ref" : "FSG71/1-10V",
+                "comlink": "3208-eltako-variateur-pour-ballasts-electroniques-1-10v-4010312316283",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant. Le module envoit son état 1 seconde après la fin du changement",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn sur la position X puis cliquez sur tester sur la commande learn de Jeedom",
+                "imglink": "recepteur_dimmer_eltako_variateur_ballast_fsg71"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur radio, variateur universel, encastrable - FUD61NPN-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FUD61NPN-230V",
+                "comlink": "1936-eltako-actionneur-radio-variateur-rlcesl-et-led-encastrable-4010312300299",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant. Le module envoit son état 1 seconde après la fin du changement",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn sur la position 2 puis cliquez sur tester sur la commande learn de Jeedom",
+                "imglink": "recepteur_dimmer_eltako_dimmer"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Prise variateur - FSUD-230V",
+                "doc": "",
+                "type": "Prise",
+                "ref" : "FSUD-230V",
+                "comlink": "",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant. Le module envoit son état 1 seconde après la fin du changement",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn puis cliquez sur tester sur la commande learn de Jeedom",
+                "imglink": "recepteur_dimmer_eltako_prise_dimmer_FSUD230V"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Variateur Ballast - FUD71-230V",
+                "doc": "",
+                "type": "Ballast",
+                "ref" : "FUD71-230V",
+                "comlink": "",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant. Le module envoit son état 1 seconde après la fin du changement",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn puis cliquez sur tester sur la commande learn de Jeedom",
+                "imglink": "recepteur_dimmer_eltako_FUD71"
+            }
+        ]
+    }
+}

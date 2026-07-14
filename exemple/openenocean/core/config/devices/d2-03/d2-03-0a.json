@@ -1,0 +1,69 @@
+{
+    "d2-03-0a": {
+        "name": "[D2-03-0a] Push Button – Single Button",
+        "groupe" : "[D2-01] Light, Switching + Blind Control",
+        "configuration": {
+            "rorg": "d2",
+            "func": "03",
+            "type": "0a"
+        },
+        "commands": [
+            {
+                "name": "Action",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+				"configuration": {
+                "repeatEventManagement" : "always"
+				},
+                "logicalId": "BA::value"
+            },
+			{
+                "name": "Action Numérique",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+				"configuration": {
+                "repeatEventManagement" : "always"
+				},
+                "logicalId": "BA::raw_value"
+            },
+			{
+                "name": "Batterie",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "BATT::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nodon",
+                "name": "Soft Button",
+                "doc": "",
+                "type": "Bouton",
+                "remark": "5 appuis rapides en mode inclusion",
+                "inclusion" : "5 appuis rapides en mode inclusion",
+                "imglink": "d2-03-0a_soft_button_nodon"
+            }
+        ]
+    }
+}

@@ -1,0 +1,358 @@
+header{
+  display: none;
+}
+body{
+  background: #FFFFFF;
+}
+
+#div_pageContainer{
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+#div_mainContainer{
+  position: fixed;
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.panelVMI_body{
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  font-family: 'Roboto';
+  color: #323031;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.panelVMI_bodyAlternatif{
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  font-family: 'Roboto';
+  color: #323031;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.panelVMI_All{
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+}
+
+.panelVMI_ligne{
+    width: 100%;
+    position: relative;
+    min-height: 50px;
+    /* border-bottom: 0.1rem solid;
+    border-color :#0000001C; */
+}
+
+.verticalAlignClass{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.panelVMI_ligne > svg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ligne_70{
+  height: 80px;
+  padding-top: 10px;
+}
+
+.panelVMI_ligne_title{
+  height: 20%;
+  width: 100%;
+  position: relative;
+  left:10px;
+}
+
+.p_left{
+  width: 100%;
+  text-align: left;
+  /* float: left; */
+  left: 10px;
+}
+
+.p_right{
+    width: 100%;
+    text-align: right;
+    padding-right: 4%;
+}
+
+.iconeLeft{
+  padding-left: 45px;
+}
+
+.venti{
+  width: 50px;
+}
+.venti > svg{
+  width: 40px;
+  height: 40px;
+}
+
+.panelVMI_ligne_global_ventil {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 60px;
+}
+
+.panelVMI_ligne_ventil{
+  height: 100%;
+  max-width:80px;
+  display: flex;
+  align-items: center;
+}
+
+.bouton_ventil{
+  width: 35px;
+  padding: 10px;
+}
+
+.panelVMI_form{
+    padding-left: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.panelVMI_groupForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panelVMI_label{
+    width: 75%;
+    border-radius: 10px 0 0 10px;
+    border-right: solid 1px #00000029;
+    box-shadow: 0 -5px 5px -5px #00000029,
+            0 5px 5px -5px #00000029,
+            -5px 0 5px -5px #00000029;
+    height: 40px;
+    position: relative;
+}
+
+.panelVMI_labelText{
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  left: 10px;
+}
+
+.panelVMI_select_valeur{
+    height: 40px;
+    width: 25%;
+    min-width: 65px;
+    border-radius: 0 10px 10px 0;
+    border-left: solid 1px #00000029;
+    box-shadow: 0 -5px 5px -5px #00000029,
+            0 5px 5px -5px #00000029,
+            5px 0 5px -5px #00000029;
+    position: relative;
+}
+.panelVMI_label_texte{
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right:50%;
+  text-align: right;
+}
+
+.crossSelect{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+}
+
+
+.panelVMI_select{
+    width: 10%;
+}
+
+.panelVMI_ligne_0{
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  margin: 20px 0 10px 0;
+  font-size: 12pt;
+  text-transform:uppercase;
+  font-weight: bold;
+  color: #4D009A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panelVMI_ligne_0:before {
+  content: "";
+  background: #4D009A;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+}
+.panelVMI_ligne_0:after {
+  content: "";
+  background: #4D009A;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+}
+
+.panelVMI_0{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #FFFFFF;
+    padding: 0.9%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 30px;
+    border-color: #FFFFFF;
+    text-transform:uppercase;
+    font-size: 14px;
+    letter-spacing: 1.25;
+    box-shadow: 0 4px #0000001C;
+}
+.panelVMI_0:hover{
+    background-color: #4D009A!important;
+}
+/* .panelVMI_ligne_Surv{
+    border-top: 0.1rem solid;
+    border-color :#0000001C;
+} */
+.bouton_radioBottom{
+  float: left;
+  width: 35px;
+  padding-left: 7px;
+  padding-top: 5px;
+}
+
+.panelVMI_labelRadio{
+    vertical-align: -moz-middle-with-baseline;
+    vertical-align: baseline;
+}
+.panelVMI_ligne_ventil_left{
+    display: flex;
+    align-items: center;
+    float: left;
+    height: 100%;
+    padding-left: 1%;
+}
+
+.panelVMI_ligne_ventil_right{
+    display: flex;
+    align-items: center;
+    float: left;
+    height: 100%;
+    padding-left: 40%;
+}
+
+/* Button inactif SVG */
+.buttonInactifPilot{
+  opacity: 0.2;
+}
+.buttonInactifPilot > #Fill-ombre{
+  display: none;
+}
+.buttonInactifPilot > #Fill-1{
+  fill: #86a3d0;
+}
+/* Button actif */
+.buttonActifPilot{
+  opacity: 1;
+}
+.buttonActifPilot > #Fill-ombre{
+  display: none;
+}
+.buttonActifPilot > #Fill-1{
+  fill: #4D009A;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalTemperatureText{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 1.25;
+}
+
+/* LIGNE SELECT*/
+.ligneSelect {
+  background-color: #4D009A;
+  color: #FFFFFF;
+}

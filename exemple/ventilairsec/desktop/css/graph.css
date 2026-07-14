@@ -1,0 +1,341 @@
+header{
+  display: none;
+}
+body{
+  background: #FFFFFF;
+}
+#div_pageContainer{
+    top : 0;
+    width: 100%;
+    height: 100%;
+}
+
+#div_mainContainer{
+  position: fixed;
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.graphVMI_body{
+  top : 0;
+  width: 100%;
+  height: calc(100% - 10px);
+  min-width: 200px;
+  min-height: 200px;
+  font-family: 'Roboto';
+  background-color: #FFFFFF;
+}
+
+.graphVMI_All{
+    width: 95%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+.graphVMI_top{
+  width: 100%;
+  height: 15%;
+  position: relative;
+}
+
+.graphVMI_middle{
+  width: 100%;
+  height: 50%;
+}
+
+.graphVMI_bottom{
+  width: 100%;
+  height: 35%;
+}
+
+.graphVMI_bottom_time{
+  width: 100%;
+  height: 40%;
+  background-color: #323031;
+}
+
+.graphVMI_bottom_Valeur{
+  width: 100%;
+  height: 60%;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.graphVMI_bottom_Valeur_middle{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 25%;
+  background-color: #FFFFFF;
+}
+.graphVMI_bottom_Valeur_middle_top{
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.graphVMI_bottom_Valeur_middle_middle{
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.graphVMI_bottom_Valeur_middle_bottom{
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+
+.fleche{
+  max-width: 20%;
+  height: 100%;
+}
+
+.fleche > svg {
+  width: 80px;
+  height: 100%;
+}
+
+.fleche_Left{
+  position: absolute;
+  left:0px;
+}
+
+.fleche_Right{
+  position: absolute;
+  right:0px;
+}
+
+.centerText{
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.graphVMI_bottom_time_haut{
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+
+.graphVMI_bottom_time_bas{
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+
+.triangle{
+ display : inline-block;
+ height : 0;
+ width : 0;
+ border-right : 120px solid transparent;
+ border-bottom :130px solid #FFFFFF;
+ border-left : 120px solid transparent;
+}
+
+canvas{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+  position: relative;
+}
+
+.petiteBarre{
+  position: absolute;
+  width: 0.2%;
+  height: 60%;
+  background-color: #4D009A;
+  left: 49.90%;
+}
+
+.caseSet {
+  width: 18%;
+  height: 75%;
+  top : 20%;
+  float: left;
+  position: absolute;
+  font-size: 12px;
+}
+
+.caseSet_0 {
+  left: -5%;
+  color: #FFFFFF;
+}
+
+.caseSet_1 {
+  left: 41%;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  color: #4D009A;
+}
+
+.caseSet_2 {
+  right: -5%;
+  color: #FFFFFF;
+}
+
+.textCase{
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.dateHumain{
+  color: #323031;
+}
+
+.XHumain{
+  color: #323031;
+}
+
+.YHumain{
+  color: #4D009A;
+  font-size: 30px;
+}
+
+.uniteHumain{
+  color: #4D009A;
+}
+
+.TypeHumain{
+  color: #4D009A;
+}
+
+.graphVMI_top_1{
+    position: absolute;
+    left: 2%;
+    width: 27%;
+    height: 100%;
+}
+
+.graphVMI_top_2{
+    position: absolute;
+    left: 30%;
+    width: 32%;
+    height: 100%;
+}
+
+.graphVMI_top_4{
+    position: absolute;
+    right: 1%;
+    width: 20%;
+    height: 100%;
+}
+
+.graphVMI_top_3{
+    position: absolute;
+    right: 16%;
+    width: 20%;
+    height: 100%;
+}
+
+.iconGraph{
+  position: absolute;
+  height: 100%;
+  left : 0;
+  width: 25%;
+}
+
+.iconGraph > svg{
+  width:30px;
+  height: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  top:50%;
+}
+
+.titleIcon{
+  position: absolute;
+  width: 80%;
+  left: 36%;
+  transform: translateY(-50%);
+  top:50%;
+  color: #4D009A;
+  font-size: 10px;
+  text-align: left;
+}
+
+.iconplusTest{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+
+.panelVMI_select_valeur{
+    top: 13%;
+    height: 74%;
+    color: #323031;
+    width: 100%;
+    border: 0.1rem solid;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 5px #0000001C;
+    position: relative;
+}
+.panelVMI_label_texte{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left:3%;
+  text-align: left;
+  font-weight: bold;
+}
+.crossSelect{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+}
+
+.panelVMI_ligne{
+    width: 100%;
+    position: relative;
+    min-height: 50px;
+    border-bottom: 0.1rem solid;
+    border-color :#0000001C;
+}
+.modalTemperatureText{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 1.25;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Button inactif SVG */
+.buttonInactifPilot{
+  opacity: 0.2;
+}
+/* Button actif */
+.buttonActifPilot{
+  opacity: 1;
+}

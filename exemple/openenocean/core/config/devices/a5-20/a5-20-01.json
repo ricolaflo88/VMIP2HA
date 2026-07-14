@@ -1,0 +1,234 @@
+{
+    "a5-20-01": {
+        "name": "[A5-20-01] Battery Powered Actuator (BI-DIR)",
+        "groupe" : "[A5-20] HVAC Components",
+        "configuration": {
+            "rorg": "a5",
+            "func": "20",
+            "type": "01",
+			"hasSourceTemp" : 1
+        },
+        "commands": [
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "TEMPERATURE"
+                },
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "logicalId": "TMP::value"
+            },
+            {
+                "name": "Ouverture",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "%",
+                "logicalId": "CV::value"
+            },
+            {
+                "name": "Ouverture demandée",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "ouverturedemandée"
+            },
+            {
+                "name": "Température demandée",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "températuredemandée"
+            },
+			{
+                "name": "Dernier mode envoyé",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "derniermodeenvoyé"
+            },
+            {
+                "name": "Réglage Ouverture",
+                "type": "action",
+                "subtype": "slider",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Ouverture demandée",
+                "configuration": {
+                    "updateCmdId": "Ouverture demandée",
+                    "updateCmdToValue": "#slider#"
+                },
+                "logicalId": "direction:2,delay:1,SPS:0,SP:#slider#"
+            },
+            {
+                "name": "Réglage Température Consigne",
+                "type": "action",
+                "subtype": "slider",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Température demandée",
+                "configuration": {
+                    "updateCmdId": "Température demandée",
+                    "updateCmdToValue": "#slider#",
+					"minValue": 0, 
+					"maxValue": 40
+                },
+                "logicalId": "direction:2,delay:1,SPS:1,SP:#slider#||*6.375,TMP:#sourceTemp#"
+            },
+            {
+                "name": "Mode été",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "configuration": {
+                    "updateCmdId": "Dernier mode envoyé",
+                    "updateCmdToValue": "Eté"
+                },
+                "logicalId": "direction:2,delay:1,SB:1"
+            },
+            {
+                "name": "Mode hiver",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "configuration": {
+                    "updateCmdId": "Dernier mode envoyé",
+                    "updateCmdToValue": "Hiver"
+                },
+                "logicalId": "direction:2,delay:1,SB:0"
+            },
+            {
+                "name": "Batterie",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ENIE::value",
+                "display": {
+                    "invertBinary": "1"
+                }
+            },
+            {
+                "name": "Obstruction",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ACO::value",
+                "display": {
+                    "invertBinary": "1"
+                }
+            },
+            {
+                "name": "Détection Fenêtre",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "DWO::value",
+                "display": {
+                    "invertBinary": "1"
+                }
+            },
+            {
+                "name": "Charge",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ES::value"
+            },
+            {
+                "name": "Boitier Ouvert",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CCO::value",
+                "display": {
+                    "invertBinary": "1"
+                }
+            },
+            {
+                "name": "Capacité batterie",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BCAP::value",
+                "display": {
+                    "invertBinary": "1"
+                }
+            },
+            {
+                "name": "Mesure température",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "FTS::value",
+                "display": {
+                    "invertBinary": "1"
+                }
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Micropelt",
+                "name": "Vanne thermostatique EnOcean sans pile",
+                "doc": "",
+                "type": "Vanne",
+                "ref" : "MVA-002",
+                "comlink": "3259-micropelt-vanne-thermostatique-enocean-4260413370022",
+                "remark": "Bien s'assurer que la vanne clignote une fois en réponse à l'inclusion",
+                "inclusion" : "Mode inclusion auto et double appui sur le bouton learn",
+                "imglink": "a5-20-01_micropelt"
+            },
+			{
+                "manufacturer": "Thermokon",
+                "name": "SAB+ airconfig",
+                "doc": "",
+                "type": "Vanne",
+                "ref" : "sab+-aircfg",
+                "comlink": "",
+                "remark": "Bien s'assurer que la vanne clignote une fois en réponse à l'inclusion",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "a5-20-01_thermokon_sab"
+            }
+        ]
+    }
+}

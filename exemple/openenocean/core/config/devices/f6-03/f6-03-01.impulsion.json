@@ -1,0 +1,52 @@
+{
+    "f6-03-01.impulsion": {
+        "name": "[F6-03-01] Light and Blind Control - Application Style 1 - Impulsion",
+        "groupe" : "[F6-03] Rocker Switch, 4 Rocker",
+        "configuration": {
+            "rorg": "f6",
+            "func": "03",
+            "type": "01",
+            "ignoreRelease": 0,
+            "allButtons": 0
+        },
+        "commands": [
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "OPENING"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "EB::raw_value" 
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Eltako",
+                "name": "Module F8S12-12VDC",
+                "doc": "",
+                "type": "Impulsion",
+                "ref" : "",
+                "comlink": "",
+                "remark": "Bien choisir le bon profil après inclusion et créer un équipement par canal",
+                "inclusion" : "Mode inclusion auto et enclencher le canal",
+                "imglink": "f6-03-01.impulsion_eltako_F8S12-12VDC"
+            }
+        ]
+    }
+}

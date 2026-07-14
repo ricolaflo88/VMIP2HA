@@ -1,0 +1,179 @@
+{
+    "d2-14-30": {
+        "name": "[D2-14-30] Smoke Alarm Humidity Temperature Confort Air",
+        "groupe" : "[D2-14] Multi function sensors",
+        "configuration": {
+            "rorg": "d2",
+            "func": "14",
+            "type": "30"
+        },
+        "commands": [
+            {
+                "name": "Alarme",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "display": {
+                   "invertBinary": "1"
+                }, 
+                "unite": "",
+                "logicalId": "SMAS::raw_value"
+            },
+            {
+                "name": "Défaut capteur",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "display": {
+                   "invertBinary": "1"
+                }, 
+                "unite": "",
+                "logicalId": "SFMD::raw_value"
+            },
+            {
+                "name": "Maintenance-défaut",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "display": {
+                   "invertBinary": "1"
+                }, 
+                "unite": "",
+                "logicalId": "SMACAM::raw_value"
+            },
+            {
+                "name": "Température-défaut",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "display": {
+                   "invertBinary": "1"
+                }, 
+                "unite": "",
+                "logicalId": "SMACAT::raw_value"
+            },
+            {
+                "name": "Humidité-défaut",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                   "invertBinary": "1"
+                }, 
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "SMACAH::raw_value"
+            },
+            {
+                "name": "Dernière maintenance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "week",
+                "logicalId": "TSLM::value"
+            },
+            {
+                "name": "Etat Batterie",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ES::raw_value"
+            },	
+            {
+                "name": "Durée de vie restante",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "month",
+                "logicalId": "RPLT::value"
+            },
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TMP8::value"
+            },
+            {
+                "name": "Humidité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "HUM::value"
+            },
+            {
+                "name": "Confort Hygrothermal",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HCI::raw_value"
+            },
+			{
+                "name": "Confort Hygrothermal (texte)",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HCI::value"
+            },
+            {
+                "name": "Qualité d'air (texte)",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQTH::value"
+            },		
+            {
+                "name": "Etat Batterie (texte)",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ES::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nexelec",
+                "name": "Insafe",
+                "doc": "",
+                "type": "Fumée",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et triple clique sur le bouton",
+                "imglink": "d2-14-30_insafe_nexelec"
+            }
+        ]
+    }
+}

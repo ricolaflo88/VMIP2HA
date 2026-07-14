@@ -1,0 +1,108 @@
+{
+    "d2-15-00": {
+        "name": "[D2-15-00] People Activity Counter",
+        "groupe" : "[D2-15] Single Sensor",
+        "configuration": {
+            "rorg": "d2",
+            "func": "15",
+            "type": "00"
+        },
+        "commands": [
+            {
+                "name": "Presence",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+				"template": {
+					"dashboard": "line",
+					"mobile": "line"
+				},
+                "logicalId": "PRES::raw_value"
+            },
+            {
+                "name": "Presence (label)",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "PRES::value"
+            },
+            {
+                "name": "Energy Storage",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+				"template": {
+					"dashboard": "line",
+					"mobile": "line"
+				},
+                "logicalId": "ESSTS::raw_value"
+            },
+            {
+                "name": "Energy Storage (label)",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ESSTS::value"
+            },
+            {
+                "name": "PIR Rate",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "s",
+				"template": {
+					"dashboard": "line",
+					"mobile": "line"
+				},
+                "logicalId": "PIRUPD::value"
+            },
+            {
+                "name": "PIR counter",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+				"template": {
+					"dashboard": "line",
+					"mobile": "line"
+				},
+                "unite": "activation(s)",
+                "logicalId": "PIRCOUNT::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "EasyFit",
+                "name": "EPAC",
+                "doc": "",
+                "type": "Présence",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et clique sur le bouton",
+                "imglink": "d2-15-00_epac_easyfit"
+            }
+        ]
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "f6-02-01": {
+        "name": "[F6-02-01] Light and Blind Control - Application Style 1",
+        "groupe" : "[F6-02] Rocker Switch, 2 Rocker ",
+        "configuration": {
+            "rorg": "f6",
+            "func": "02",
+            "type": "02",
+            "ignoreRelease": 1 ,
+            "allButtons": 1,
+            "default": "f6-02/f6-02-01.mode_on_off_soft_remote_blanc"
+        },
+        "commands": [
+            {
+                "name": "Bouton 1",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_1"
+            },
+            {
+                "name": "Bouton 2",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_2"
+            },
+            {
+                "name": "Bouton 3",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_3"
+            },
+            {
+                "name": "Bouton 4",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_4"
+            },
+            {
+                "name": "Multiple",
+                "type": "info",
+                "subtype": "string",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "multiple"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ]
+    }
+}

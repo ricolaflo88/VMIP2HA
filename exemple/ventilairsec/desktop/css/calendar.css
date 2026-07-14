@@ -1,0 +1,351 @@
+header{
+  display: none;
+}
+body{
+  background: #FFFFFF;
+}
+
+#div_pageContainer{
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+#div_mainContainer{
+  position: fixed;
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+
+/********/
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.Calendar_panelVMI_body{
+  top : 0;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  font-family: 'Roboto';
+  background-color: #FFFFFF;
+}
+
+.Calendar_panelVMI_haut{
+    width: 100%;
+    top : 0;
+    height: 10%;
+    background-color: #FFFFFF;
+}
+
+.Calendar_panelVMI_Calendrier{
+    width: 100%;
+    top : 10%;
+    height: 90%;
+}
+
+/************/
+.Calendar_Day{
+  height: 30px;
+  width: 100%;
+  top: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.calendar_grip_sur{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  top : 30%;
+}
+
+.Calendar_grip{
+  top : 0;
+  width: 100%;
+  height: 960px;
+}
+
+.calendrierParent {
+  display: grid;
+  grid-template-columns: 9% repeat(7, 12.7%);
+  grid-template-rows: repeat(24, 40px);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.Calendar_Day {
+  display: grid;
+  grid-template-columns: 9% repeat(7, 12.7%);
+  grid-template-rows: 30px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  border-bottom: 1px solid #4D009A;
+}
+
+.calendrierParent_3 {
+  display: grid;
+  grid-template-columns: 9% repeat(3, 30%) 0px 0px 0px 0px;
+  grid-template-rows: repeat(24, 40px);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.calendrierParent_3_Mercredi {
+  display: grid;
+  grid-template-columns: 9% 0px 0px repeat(3, 30%) 0px 0px;
+  grid-template-rows: repeat(24, 40px);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.calendrierParent_3_Samedi {
+  display: grid;
+  grid-template-columns: 9% 0px 0px 0px 0px repeat(3, 30%);
+  grid-template-rows: repeat(24, 40px);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.Calendar_Day_3 {
+  display: grid;
+  grid-template-columns: 9% repeat(3, 30%) 0px 0px 0px 0px;
+  grid-template-rows: 30px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  border-bottom: 1px solid #4D009A;
+}
+.Calendar_Day_3_Mercredi {
+  display: grid;
+  grid-template-columns: 9% 0px 0px repeat(3, 30%) 0px 0px;
+  grid-template-rows: 30px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  border-bottom: 1px solid #4D009A;
+}
+.Calendar_Day_3_Samedi {
+  display: grid;
+  grid-template-columns: 9% 0px 0px 0px 0px repeat(3, 30%);
+  grid-template-rows: 30px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  border-bottom: 1px solid #4D009A;
+}
+
+.heureText{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 25px;
+}
+
+.horaireCase{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dayday{
+  text-align:center;
+  border-left: 1px dashed #4D009A;
+  border-right: 1px dashed #4D009A;
+}
+
+.case_0{
+  background-color: #FFFFFF;
+  border: 2px groove #4D009A;
+  border-radius: 5px;
+  margin: 0.2%;
+  position: relative;
+}
+
+.case_1{
+  background-color: #0000001C;
+  border: 2px groove #4D009A;
+  border-radius: 5px;
+  margin: 0.2%;
+  position: relative;
+}
+
+.case_2{
+  background-color: #D7D5D6;
+  border: 2px groove #4D009A;
+  border-radius: 5px;
+  margin: 0.2%;
+  position: relative;
+}
+
+.case_3{
+  background-color:#00000042;
+  border: 2px groove #4D009A;
+  border-radius: 5px;
+  margin: 0.2%;
+  position: relative;
+}
+
+.icone > svg{
+  width: 35px;
+  height: 35px;
+}
+
+.icone {
+  text-align: center;
+  height: 35px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.temperatureClass{
+  color: #FFFFFF;
+  font-size: 20;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2%;
+}
+
+.icone > svg > .buttonInactif > #Fill-1 {
+  fill : #FFFFFF;
+}
+
+.iconePlus{
+  font-size: 35px;
+  color : #4D009A;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #FFFFFF!important;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #323031;
+}
+
+.panelVMI_All{
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+}
+
+.panelVMI_ligne{
+    width: 100%;
+    position: relative;
+    min-height: 50px;
+    /* border-bottom: 0.1rem solid;
+    border-color :#DADDE5; */
+}
+
+.panelVMI_ligne_end{
+  width: 100%;
+  position: relative;
+  min-height: 50px;
+  border-color :#4D009A;
+}
+
+.TitleModal{
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.TitleModalDay{
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.panelVMI_0{
+    width: 90%;
+    margin: 2% 5%;
+    background-color: #313030!important;
+    color: #FFFFFF!important;
+    padding: 0.9%;
+    border-radius:25px!important;
+    border-color: #FFFFFF;
+    text-transform:uppercase;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    box-shadow: 0 4px #0000001C;
+}
+.panelVMI_0:hover{
+    color: #4D009A;
+}
+
+.Calendar_left_cross{
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.Calendar_right_Panel{
+  float: right;
+  height: 90%;
+  top: 5%;
+  width: 70%;
+  right: 2%;
+}
+
+.Bloc_haut{
+  height: 100%;
+  position: relative;
+  width: 33.33%;
+  float: left;
+}
+
+.iconeHautCalendrier{
+  width: 25px;
+  float: left;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.textHautCalendrier{
+  float: left;
+  left: 26px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.FloatAbsol{
+  position: fixed;
+  width: 20%;
+  left: 3%;
+  top : 1%;
+  height: 5%;
+}
+
+.selectHeure{
+  width: 20%;
+}

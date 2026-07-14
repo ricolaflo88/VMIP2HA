@@ -1,0 +1,39 @@
+{
+    "a5-02-11": {
+        "name": "[A5-02-11] Temperature Sensor Range -50°C to 30°C",
+        "groupe" : "[A5-02] Temperature Sensors",
+        "configuration": {
+            "rorg": "a5",
+            "func": "02",
+            "type": "11"
+        },
+        "commands": [
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "TEMPERATURE"
+                },
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "logicalId": "TMP::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+        ]
+    }
+}

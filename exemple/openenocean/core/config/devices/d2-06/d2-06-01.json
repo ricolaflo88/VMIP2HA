@@ -1,0 +1,119 @@
+{
+    "d2-06-01": {
+        "name": "[D2-06-01] Alarm, Position Sensor, Vacation Mode, Optional Sensors",
+        "groupe" : "[D2-06] Multisensor Window Handle",
+        "configuration": {
+            "rorg": "d2",
+            "func": "06",
+            "type": "01"
+        },
+        "commands": [
+            {
+                "name": "Alarme",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BAL::value"
+            },
+            {
+                "name": "Poignée",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HP::value"
+            },
+            {
+                "name": "Fenêtre",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "WS::value"
+            },
+            {
+                "name": "Bouton Droit",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BR::value"
+            },
+            {
+                "name": "Bouton Gauche",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BL::value"
+            },
+            {
+                "name": "Vacances",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "V::value"
+            },
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TMP::value"
+            },
+            {
+                "name": "Humidité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "HUM::value"
+            },
+            {
+                "name": "Batterie",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "BS::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Soda",
+                "name": "Poignée intelligente EnOcean",
+                "doc": "",
+                "type": "Poignée",
+                "ref" : "",
+                "comlink": "2",
+                "remark": "Bien s'assurer que la poignée bippe après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto poignée à 12h et appui sur le bouton",
+                "imglink": "d2-06-01_poignee_soda"
+            }
+        ]
+    }
+}

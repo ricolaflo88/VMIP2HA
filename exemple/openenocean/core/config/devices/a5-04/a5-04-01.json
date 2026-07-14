@@ -1,0 +1,241 @@
+{
+    "a5-04-01": {
+        "name": "[A5-04-01] Range 0°C to +40°C and 0% to 100%",
+        "groupe" : "[A5-04] Temperature and Humidity Sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "04",
+            "type": "01",
+            "default": "a5-04/a5-04-01_nodon_capteur_de_temperature_humidite_blanc"
+        },
+        "commands": [
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "TEMPERATURE"
+                },
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "logicalId": "TMP::value"
+            },
+            {
+                "name": "Humidité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "%",
+                "display": {
+                    "generic_type": "HUMIDITY"
+                },
+                "logicalId": "HUM::value"
+            },
+            {
+                "name": "Bouton",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "configuration": {
+                    "repeatEventManagement": "always"
+                },
+                "unite": "",
+                "logicalId": "BUTT::raw_value"
+            },
+            {
+                "name": "IAQ Global",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_GLOBAL::raw_value"
+            },
+            {
+                "name": "IAQ Global Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_GLOBAL::value"
+            },
+            {
+                "name": "IAQ Source",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_SOURCE::raw_value"
+            },
+            {
+                "name": "IAQ Source Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_SOURCE::value"
+            },
+            {
+                "name": "IAQ Dry",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DRY::raw_value"
+            },
+            {
+                "name": "IAQ Dry Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DRY::value"
+            },
+            {
+                "name": "IAQ Mould",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_MOULD::raw_value"
+            },
+            {
+                "name": "IAQ Mould Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_MOULD::value"
+            },
+            {
+                "name": "IAQ DM",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DM::raw_value"
+            },
+            {
+                "name": "IAQ DM Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DM::value"
+            },
+            {
+                "name": "IAQ Co2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO2::raw_value"
+            },
+            {
+                "name": "IAQ Co2 Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO2::value"
+            },
+            {
+                "name": "IAQ Co",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO::raw_value"
+            },
+            {
+                "name": "IAQ Co Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO::value"
+            },
+            {
+                "name": "HCI",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HCI::raw_value"
+            },
+            {
+                "name": "HCI Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HCI::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+             {
+                "manufacturer": "Nodon",
+                "name": "Capteur de température et humidité Enocean Blanc",
+                "doc": "",
+                "type": "Température,Humidité",
+                "ref" : "STPH-2-1-05",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "a5-04-01_nodon_capteur_de_temperature_humidite_blanc.jpg"
+            },
+            {
+                "manufacturer": "Trio2sys",
+                "name": "Sonde radio humidité et température pour montage interieur",
+                "doc": "",
+                "type": "Température,Humidité",
+                "ref" : "o2line",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et aimant",
+                "imglink": "a5-04-01_trio2sys_capteur_temperature_humidite_o2line_blanc"
+            },
+            {
+                "manufacturer": "Nexelec",
+                "name": "Insafe+ Pilot Sonde humidité et température",
+                "doc": "",
+                "type": "Température,Humidité",
+                "ref" : "Insafe+ Pilot",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et triple clic sur bouton",
+                "imglink": "a5-04-01_nexelec_insafe+_pilot_temperature_humidite"
+            }
+        ]
+    }
+}

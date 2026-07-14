@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<telegrams version="2.6.4" major_version="2" minor_version="6" revision="4">
+	<telegram rorg="0xD1079" type="MSC" description="MSC Telegram Ventilairsec">
+		<profiles func="0x00" description="0x00">
+			<profile type="0x00" description="0x00">
+				<command description="command indentifier" shortcut="CMD" offset="4" size="4">
+					<item description="Cyclic" value="1" />
+					<item description="Action" value="2" />
+					<item description="Awake" value="3" />
+					<item description="Clock" value="4" />
+					<item description="Test" value="7" />
+				</command>
+				<data command="1" bits="6">
+					<enum description="Command indentifier" shortcut="CMD" offset="12" size="4">
+						<rangeitem description="Command ID {value}" start="0" end="13" />
+					</enum>
+					<enum description="Batterie" shortcut="Batt" offset="16" size="8">
+						<item description="Off" value="0" />
+						<item description="Level 0" value="1" />
+						<item description="Level 1" value="2" />
+						<item description="Level 2" value="3" />
+						<item description="Level 3" value="4" />
+						<item description="Level 4" value="5" />
+						<item description="Level 5" value="6" />
+					</enum>
+					<value description="Temperature" shortcut="TEMP" offset="24" size="16" unit="">
+						<range>
+							<min>0</min>
+							<max>16500</max>
+						</range>
+						<scale>
+							<min>-40.00</min>
+							<max>125.00</max>
+						</scale>
+					</value>
+					<value description="Humidité" shortcut="HUM" offset="40" size="8" unit="">
+						<range>
+							<min>0</min>
+							<max>255</max>
+						</range>
+						<scale>
+							<min>0</min>
+							<max>255</max>
+						</scale>
+					</value>
+				</data>
+				<data command="3" bits="6">
+					<enum description="Command indentifier" shortcut="CMD" offset="12" size="4">
+						<rangeitem description="Command ID {value}" start="0" end="13" />
+					</enum>
+					<enum description="Batterie" shortcut="BATT" offset="16" size="8">
+						<item description="Off" value="0" />
+						<item description="Level 0" value="1" />
+						<item description="Level 1" value="2" />
+						<item description="Level 2" value="3" />
+						<item description="Level 3" value="4" />
+						<item description="Level 4" value="5" />
+						<item description="Level 5" value="6" />
+					</enum>
+					<value description="Temperature" shortcut="TEMP" offset="24" size="16" unit="">
+						<range>
+							<min>0</min>
+							<max>16500</max>
+						</range>
+						<scale>
+							<min>-40.00</min>
+							<max>125.00</max>
+						</scale>
+					</value>
+					<value description="Humidité" shortcut="HUM" offset="40" size="8" unit="">
+						<range>
+							<min>0</min>
+							<max>255</max>
+						</range>
+						<scale>
+							<min>0</min>
+							<max>255</max>
+						</scale>
+					</value>
+				</data>
+			</profile>
+		</profiles>
+	</telegram>
+</telegrams>

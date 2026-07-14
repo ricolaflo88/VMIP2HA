@@ -1,0 +1,63 @@
+{
+    "a5-3f-7f": {
+        "name": "[A5-3F-7F] Universal",
+        "groupe" : "[A5-3F] Universal",
+        "configuration": {
+            "rorg": "a5",
+            "func": "3F",
+            "type": "7F"
+        },
+        "commands": [
+            {
+                "name": "Part 1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "logicalId": "P1::value"
+            },
+            {
+                "name": "Part 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "logicalId": "P2::value"
+            },
+            {
+                "name": "Part 3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "logicalId": "P3::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Thermokon",
+                "name": "SR65 3AI",
+                "doc": "",
+                "type": "Modules Entrée",
+                "ref" : "SR65-3AI",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "a5-3f-7f_thermokon_SR65_3AI"
+            }
+        ]
+		
+    }
+}

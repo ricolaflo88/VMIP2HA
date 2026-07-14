@@ -1,0 +1,53 @@
+{
+    "d1079-00-00": {
+        "name": "[D1079-00-00] Assistant Ventilairsec",
+        "groupe" : "[D1] Manufacturer Specific",
+        "configuration": {
+            "rorg": "d1079",
+            "func": "00",
+            "type": "00"
+        },
+        "commands": [
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "logicalId": "TEMP::value"
+            },
+            {
+                "name": "Humidité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "%",
+                "logicalId": "HUM::value"
+            },
+            {
+                "name": "Batterie",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BATT::value"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Ventilairsec",
+                "name": "Assistant",
+                "doc": "",
+                "type": "Télécommande",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "",
+                "imglink": "d1079-00-00_assistant_ventilairsec"
+            }
+        ]
+    }
+}

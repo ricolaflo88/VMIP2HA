@@ -1,0 +1,221 @@
+{
+    "d2-01-0b": {
+        "name": "[D2-01-0B] Type 0B",
+        "groupe" : "[D2-01] Electronic switches and dimmers with Energy Measurement and Local Control",
+        "configuration": {
+            "rorg": "d2",
+            "func": "01",
+            "type": "0b",
+            "hasrepeat" : 1
+        },
+        "commands": [
+            {
+                "name": "On",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "type:switch,command:1,IO:0,OV:100",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Off",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "type:switch,command:1,IO:0,OV:0",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "ENERGY_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "OV::raw_value"
+            },
+            {
+                "name": "Puissance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P1"
+            },
+            {
+                "name": "Consommation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C1"
+            },
+            {
+                "name": "Refresh Puissance",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:1,IO:0"
+            },
+            {
+                "name": "Refresh Consommation",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:0,IO:0"
+            },
+            {
+                "name": "Reset Consommation",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:5,RE:1,IO:0,EP:0"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "parameters": [
+            {
+                "name": "Taught-in devices",
+                "shortcut" : "DE",
+                "channel" : "0",
+                "cmd" : 2,
+                "description": "Si le paramètre est activé, tous les émetteurs appris par la prise peuvent la contrôler. Si le paramètre est désactivé, seule la centrale domotique peut contrôler la prise.",
+                "type": "binary"
+            },
+            {
+                "name": "Local Control",
+                "shortcut" : "LC",
+                "channel" : "0",
+                "cmd" : 2,
+                "description": "Cette option permet d’activer ou de désactiver l’usage manuel de la prise. Dans les deux cas l’accès au mode apprentissage et réinitialisation d’usine reste disponible.",
+                "type": "binary"
+            },
+            {
+                "name": "User interface day/night mode",
+                "shortcut" : "DN",
+                "channel" : "0",
+                "cmd" : 2,
+                "description": "Si le paramètre est sur off, le voyant de la prise s’allume lorsque celle-ci est activée et s’éteint lorsqu’elle est désactivée. Si le paramètre est sur on, le voyant de la prise reste éteint quelque soit l’état de celle-ci.",
+                "type": "binary"
+            },
+            {
+                "name": "Default state",
+                "shortcut" : "DS",
+                "channel" : "0",
+                "cmd" : 2,
+                "description": "Cette option permet de définir l’état de la prise lors de son branchement ou après une coupure de courant.",
+                "type": "list",
+                "values" : {"OFF" : 0, "ON" : 1, "Remember previous state" : 10}
+            },
+            {
+                "name": "Report measurement",
+                "shortcut" : "RM",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Cette option permet d'activer ou désactiver les rapports automatique de mesure",
+                "type": "binary"
+            },
+            {
+                "name": "Reset measurement",
+                "shortcut" : "RE",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Cette option permet de resetter la mesure de consommation",
+                "type": "binary"
+            },
+            {
+                "name": "Measurement mode",
+                "shortcut" : "EP",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Mode de mesure (vous ne pouvez pas avoir les rapports automatiques sur les deux types)",
+                "type": "list",
+                "values" : {"Energy measurement" : 0, "Power measurement" : 1}
+            },
+            {
+                "name": "Unite",
+                "shortcut" : "UN",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Unité doit correspondre au Measurement Mode (un calcul est fait par Jeedom la puissance sera remontée en W et la consommation en kWh",
+                "type": "list",
+                "values" : {"Conso - Ws" : 0 , "Conso - Wh" : 1 , "Conso - kWh" : 2, "Puissance - W" : 3, "Puissance - kW" : 4}
+            },
+            {
+                "name": "Maximum time between two subsequent actuator messages",
+                "shortcut" : "MAT",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Temps maximum entre deux rapports de 10s a 2550s",
+                "type": "value"
+            },
+            {
+                "name": "Minimum time between two subsequent actuator messages",
+                "shortcut" : "MIT",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Temps minimum entre deux rapports de 1s a 255s",
+                "type": "value"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nodon",
+                "name": "Prise intelligente + metering",
+                "doc": "",
+                "type": "Prise",
+                "ref" : "ASP-2-1-01",
+                "comlink": "2633-nodon-prise-intelligente-metering-enocean-type-eu-3700313920022",
+                "remark": "Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et appui long (2s) sur le bouton learn",
+                "imglink": "d2-01-0b_smartplug_nodon_metering"
+            }
+        ]
+    }
+}

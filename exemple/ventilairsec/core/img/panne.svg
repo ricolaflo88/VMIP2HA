@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>panne</title>
+    <desc>Created with Sketch.</desc>
+    <g id="panne" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,20 L20,20 L11.5,5 L3,20 L3,20 Z M12.5,18 L10.5,18 L10.5,16 L12.5,16 L12.5,18 L12.5,18 Z M12.5,15 L10.5,15 L10.5,11 L12.5,11 L12.5,15 L12.5,15 Z" id="Shape" fill="#000000" opacity="0.2"></path>
+        <path d="M4,19 L21,19 L12.5,4 L4,19 L4,19 Z M13.5,17 L11.5,17 L11.5,15 L13.5,15 L13.5,17 L13.5,17 Z M13.5,14 L11.5,14 L11.5,10 L13.5,10 L13.5,14 L13.5,14 Z" id="Shape" fill="#FFFFFF"></path>
+        <polygon id="Path" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) " points="0 0 24 0 24 24 0 24"></polygon>
+    </g>
+</svg>

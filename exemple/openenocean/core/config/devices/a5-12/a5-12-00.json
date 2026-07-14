@@ -1,0 +1,133 @@
+{
+    "a5-12-00": {
+        "name": "[A5-12-00]  Counter",
+        "groupe" : "[A5-12]  Automated Meter Reading (AMR)",
+        "configuration": {
+            "rorg": "a5",
+            "func": "12",
+            "type": "00"
+        },
+        "commands": [
+            {
+                "name": "Puissance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P1"
+            },
+            {
+                "name": "Consommation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C1"
+            },
+			{
+                "name": "Puissance 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P2"
+            },
+            {
+                "name": "Consommation 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C2"
+            },
+			{
+                "name": "Puissance 3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P3"
+            },
+            {
+                "name": "Consommation 3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C3"
+            },
+			{
+                "name": "Puissance 4",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P4"
+            },
+            {
+                "name": "Consommation 4",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C4"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Avidsen",
+                "name": "Module Pince ampérimétrique",
+                "doc": "",
+                "type": "Compteur",
+                "ref" : "970265",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et mettre le module en learn",
+                "imglink": "a5-12-00_avidsen_amp"
+            },
+			 {
+                "manufacturer": "Thermokon",
+                "name": "Energy Meter",
+                "doc": "",
+                "type": "Compteur",
+                "ref" : "SR-MI-HS",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et mettre le module en learn",
+                "imglink": "a5-12-00_thermokon_energy_meter"
+            }
+        ]
+    }
+}

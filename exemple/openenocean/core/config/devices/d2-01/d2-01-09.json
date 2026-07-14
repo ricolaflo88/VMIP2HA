@@ -1,0 +1,133 @@
+{
+    "d2-01-09": {
+        "name": "[D2-01-09] Type 09",
+        "groupe" : "[D2-01] Electronic switches and dimmers with Energy Measurement and Local Control",
+        "configuration": {
+            "rorg": "d2",
+            "func": "01",
+            "type": "09",
+            "rorg2": "a5",
+            "func2": "12",
+            "type2": "01"
+        },
+        "commands": [
+            {
+                "name": "On",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "CMD:1,IO:0,OV:100",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Off",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "CMD:1,IO:0,OV:0",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "OV::raw_value",
+                "display": {
+                    "generic_type": "ENERGY_STATE"
+                }
+            },
+            {
+                "name": "Puissance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P1",
+                "configuration": {
+                    "maxValue": 2500,
+                    "minValue": 0
+                }
+            },
+            {
+                "name": "Consommation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C1"
+            },
+            {
+                "name": "Refresh Puissance",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:1,IO:0"
+            },
+            {
+                "name": "Refresh Consommation",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:0,IO:0"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "UbiWizz",
+                "name": "Smart Plug EnOcean",
+                "doc": "",
+                "type": "Prise",
+                "ref" : "UBIPSC234",
+                "comlink": "2667-ubiwizz-smart-plug-enocean-schuko",
+                "remark": "Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et appui long (5s) sur le bouton learn puis relachement et appuie de 2 secondes",
+                "imglink": "d2-01-09_smartplug_ubiwizz_metering"
+            }
+        ]
+    }
+}

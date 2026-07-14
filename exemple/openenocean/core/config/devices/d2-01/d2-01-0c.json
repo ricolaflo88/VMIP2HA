@@ -1,0 +1,251 @@
+{
+    "d2-01-0c": {
+        "name": "[D2-01-0C] Type 0C",
+        "groupe" : "[D2-01] Electronic switches and dimmers with Energy Measurement and Local Control",
+        "configuration": {
+            "rorg": "d2",
+            "func": "01",
+            "type": "0c",
+            "hasrepeat" : 1,
+            "default": "d2-01/d2-01-0c_fil_pilote_nodon"
+        },
+        "commands": [
+            {
+                "name": "Confort",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "generic_type" : "HEATING_ON",
+                "logicalId": "type:switch,command:8,PM:1"
+            },
+			{
+                "name": "Eco",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "generic_type" : "HEATING_OTHER",
+                "logicalId": "type:switch,command:8,PM:2"
+            },
+			{
+                "name": "Hors-Gel",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "generic_type" : "HEATING_OTHER",
+                "logicalId": "type:switch,command:8,PM:3"
+            },
+			{
+                "name": "Confort-1",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "generic_type" : "HEATING_OTHER",
+                "logicalId": "type:switch,command:8,PM:4"
+            },
+			{
+                "name": "Confort-2",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "generic_type" : "HEATING_OTHER",
+                "logicalId": "type:switch,command:8,PM:5"
+            },
+            {
+                "name": "Off",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "generic_type" : "HEATING_OFF",
+                "logicalId": "type:switch,command:8,PM:0"
+            },
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "generic_type" : "HEATING_STATE",
+                "logicalId": "PM::value"
+            },
+            {
+                "name": "Puissance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "generic_type" : "POWER",
+                "logicalId": "P1"
+            },
+            {
+                "name": "Consommation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "generic_type" : "CONSUMPTION",
+                "logicalId": "C1"
+            },
+            {
+                "name": "Refresh Puissance",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:1,IO:0"
+            },
+            {
+                "name": "Refresh Consommation",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:0,IO:0"
+            },
+            {
+                "name": "Reset Consommation",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:5,RE:1,IO:0,EP:0"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "parameters": [
+            {
+                "name": "Taught-in devices",
+                "shortcut" : "DE",
+                "description": "Si le paramètre est activé, tous les émetteurs appris par la prise peuvent la contrôler. Si le paramètre est désactivé, seule la centrale domotique peut contrôler la prise.",
+                "type": "binary"
+            },
+            {
+                "name": "Local Control",
+                "shortcut" : "LC",
+                "description": "Cette option permet d’activer ou de désactiver l’usage manuel de la prise. Dans les deux cas l’accès au mode apprentissage et réinitialisation d’usine reste disponible.",
+                "type": "binary"
+            },
+            {
+                "name": "User interface day/night mode",
+                "shortcut" : "DN",
+                "description": "Si le paramètre est sur off, le voyant de la prise s’allume lorsque celle-ci est activée et s’éteint lorsqu’elle est désactivée. Si le paramètre est sur on, le voyant de la prise reste éteint quelque soit l’état de celle-ci.",
+                "type": "binary"
+            },
+            {
+                "name": "Default state",
+                "shortcut" : "DS",
+                "description": "Cette option permet de définir l’état de la prise lors de son branchement ou après une coupure de courant.",
+                "type": "list",
+                "values" : {"OFF" : 0, "ON" : 1, "Remember previous state" : 10}
+            },
+            {
+                "name": "Report measurement",
+                "shortcut" : "RM",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Cette option permet d'activer ou désactiver les rapports automatique de mesure",
+                "type": "binary"
+            },
+            {
+                "name": "Reset measurement",
+                "shortcut" : "RE",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Cette option permet de resetter la mesure de consommation",
+                "type": "binary"
+            },
+            {
+                "name": "Measurement mode",
+                "shortcut" : "EP",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Mode de mesure (vous ne pouvez pas avoir les rapports automatiques sur les deux types)",
+                "type": "list",
+                "values" : {"Energy measurement" : 0, "Power measurement" : 1}
+            },
+            {
+                "name": "Unite",
+                "shortcut" : "UN",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Unité doit correspondre au Measurement Mode (un calcul est fait par Jeedom la puissance sera remontée en W et la consommation en kWh",
+                "type": "list",
+                "values" : {"Conso - Ws" : 0 , "Conso - Wh" : 1 , "Conso - kWh" : 2, "Puissance - W" : 3, "Puissance - kW" : 4}
+            },
+            {
+                "name": "Maximum time between two subsequent actuator messages",
+                "shortcut" : "MAT",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Temps maximum entre deux rapports de 10s a 2550s",
+                "type": "value"
+            },
+            {
+                "name": "Minimum time between two subsequent actuator messages",
+                "shortcut" : "MIT",
+                "channel" : "0",
+                "cmd" : 5,
+                "description": "Temps minimum entre deux rapports de 1s a 255s",
+                "type": "value"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Avidsen",
+                "name": "Module Fil Pilote",
+                "doc": "",
+                "type": "Fil Pilote",
+                "ref" : "",
+                "comlink": "",
+                "remark": "Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et mise en learn du module",
+                "imglink": "d2-01-0c_fil_pilote_avidsen"
+            },
+			{
+                "manufacturer": "Nodon",
+                "name": "Module Fil Pilote",
+                "doc": "",
+                "type": "Fil Pilote",
+                "ref" : "SIN-2-FP-01",
+                "comlink": "5134-nodon-module-chauffage-fil-pilote-enocean-3700313924693",
+                "remark": "Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et mise en learn du module",
+                "imglink": "d2-01-0c_fil_pilote_nodon"
+            }
+        ]
+    }
+}

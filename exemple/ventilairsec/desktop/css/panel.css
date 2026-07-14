@@ -1,0 +1,80 @@
+#div_pageContainer{
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+
+#div_mainContainer {
+  position: fixed;
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+
+.GlobalPage{
+  width: 100%;
+  height: calc(100% - 50px);
+  top: 50px;
+  left: 0;
+  position: absolute;
+  background-color: #E2E2E2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.IframeDiv{
+  width: 98%;
+  height: 80%;
+  border-radius: 12pt;
+  border: unset;
+  box-shadow: 0 3pt 6pt #0000001A;
+}
+
+.MenuDiv{
+  width: 100%;
+  height: 15%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu {
+  width: 25%;
+  height: 100%;
+  padding: 1%;
+  background-color: #FFFFFF;
+  color: #313030;
+}
+
+.Menu.actif {
+  background-color: #4D009A;
+}
+.Menu.actif > .titleMenu {
+  color: #FFFFFF;
+}
+.Menu.actif > .iconeMenu > svg {
+  fill: #FFFFFF;
+}
+
+.iconeMenu > svg {
+  fill: #313030;
+  height: 2em;
+}
+
+.iconeMenu {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleMenu {
+  height: 40%;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Roboto';
+}

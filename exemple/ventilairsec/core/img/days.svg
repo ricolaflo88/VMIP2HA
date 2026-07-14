@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>3 jours_actif</title>
+    <desc>Created with Sketch.</desc>
+    <g id="3-jours_actif" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="baseline-view_week-24px">
+            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+        </g>
+        <g id="baseline-view_column-24px">
+            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+            <path d="M9,19 L13,19 L13,7 L9,7 L9,19 Z M3,19 L7,19 L7,7 L3,7 L3,19 Z M15,7 L15,19 L19,19 L19,7 L15,7 Z" id="Shape" fill="#000000" fill-rule="nonzero" opacity="0.2"></path>
+            <path d="M10,18 L14,18 L14,6 L10,6 L10,18 Z M4,18 L8,18 L8,6 L4,6 L4,18 Z M16,6 L16,18 L20,18 L20,6 L16,6 Z" id="Shape" fill="#4D009A" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

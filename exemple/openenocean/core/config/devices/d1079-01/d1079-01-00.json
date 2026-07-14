@@ -1,0 +1,994 @@
+{
+    "d1079-01-00": {
+        "name": "[D1079-01-00] VMI Ventilairsec",
+        "groupe" : "[D1] Manufacturer Specific",
+        "configuration": {
+            "rorg": "d1079",
+            "func": "01",
+            "type": "00"
+        },
+        "commands": [
+            {
+                "name": "Mode de fonctionnement (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "MF::raw_value"
+            },
+            {
+                "name": "Mode de fonctionnement",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "MF::value"
+            },
+            {
+                "name": "Bypass (binaire)",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BYP::raw_value"
+            },
+			{
+                "name": "Bypass",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BYP::value"
+            },
+            {
+                "name": "Plage horaire",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "PLH::raw_value"
+            },
+            {
+                "name": "Débit Fixe",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "DEBF::raw_value"
+            },
+            {
+                "name": "Sur Ventilation",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "SURV::raw_value"
+            },
+            {
+                "name": "Vacances",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "VAC::raw_value"
+            },
+            {
+                "name": "Boost",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BOOS::raw_value"
+            },
+            {
+                "name": "Température consigne Electrique",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMPCELEC::value"
+            },
+            {
+                "name": "Température max Soufflage",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMPMSOUFFL::value"
+            },
+            {
+                "name": "Température consigne HydroR",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMPCHYDROR::value"
+            },
+            {
+                "name": "Température consigne SolarR",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMPCSOLAR::value"
+            },
+            {
+                "name": "MAJ logiciel",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "MAJL::raw_value"
+            },
+            {
+                "name": "Appairage",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "APPA::raw_value"
+            },
+            {
+                "name": "Test",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TEST::raw_value"
+            },
+            {
+                "name": "Localisation",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "LOC::raw_value"
+            },
+            {
+                "name": "Saison (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "SAIS::raw_value"
+            },
+            {
+                "name": "Saison",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "SAIS::value"
+            },
+            {
+                "name": "Type évènement (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TYPEV::raw_value"
+            },
+            {
+                "name": "Type évènement",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TYPEV::value"
+            },
+            {
+                "name": "Débit air sortant",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "m3/h",
+                "logicalId": "DEBAS::value"
+            },
+            {
+                "name": "Puissance Chauffage",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "PCHAUFF::value"
+            },
+            {
+                "name": "Etat système (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ETATS::raw_value"
+            },
+            {
+                "name": "Consigne vitesse moteur",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CVITM::raw_value"
+            },
+            {
+                "name": "Température extérieure",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMPEXT::value"
+            },
+            {
+                "name": "Consigne pression différentielle",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "Pa",
+                "logicalId": "CPDIFF::value"
+            },
+            {
+                "name": "Indice encrassement filtre",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "IEFIL::value"
+            },
+            {
+                "name": "Rapport cyclique boucle eau",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "RCBEAU::value"
+            },
+            {
+                "name": "Durée fonctionnement",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "j",
+                "logicalId": "DFONC::value"
+            },
+            {
+                "name": "Identifiant machine",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IDMACH::value"
+            },
+            {
+                "name": "Test QAI",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TQAI::raw_value"
+            },
+            {
+                "name": "Test Moteur",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TMOT::raw_value"
+            },
+            {
+                "name": "Test Préchauffe",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TPCHAU::raw_value"
+            },
+            {
+                "name": "Test Sonde",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TSOND::raw_value"
+            },
+            {
+                "name": "Test Global",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TGLOB::raw_value"
+            },
+            {
+                "name": "Code erreur 1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CERR1::value"
+            },
+            {
+                "name": "Code erreur 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CERR2::value"
+            },
+            {
+                "name": "Nombre semaine depuis dernière maintenance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "sem",
+                "logicalId": "NBSDMAINT::value"
+            },
+            {
+                "name": "Consommation cumulée",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "logicalId": "CONSO::value"
+            },
+            {
+                "name": "Type caisson (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TYPCAI::raw_value"
+            },
+            {
+                "name": "Type caisson",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "TYPCAI::value"
+            },
+            {
+                "name": "Bypass amont",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "BYPAMO::raw_value"
+            },
+            {
+                "name": "SolarR",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "SOLARR::raw_value"
+            },
+            {
+                "name": "HydroR",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HYDROR::raw_value"
+            },
+            {
+                "name": "Volume à ventiler",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "m3",
+                "logicalId": "VVENT::value"
+            },
+            {
+                "name": "Année installation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "AINST::value"
+            },
+            {
+                "name": "Mois installation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "MINST::value"
+            },
+            {
+                "name": "Jour installation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "JINST::value"
+            },
+            {
+                "name": "Version logiciel embarqué",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "VLOG::value"
+            },
+            {
+                "name": "Version électronique",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "VELEC::value"
+            },
+            {
+                "name": "Etat système",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "ETATS::value"
+            },
+            {
+                "name": "Ouverture bypass 1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "OUVBY1::value"
+            },
+            {
+                "name": "Type bypass 1 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POSBY1::raw_value"
+            },
+            {
+                "name": "Type bypass 1",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POSBY1::value"
+            },
+            {
+                "name": "Ouverture bypass 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "OUVBY2::value"
+            },
+            {
+                "name": "Type bypass 2 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POSBY2::raw_value"
+            },
+            {
+                "name": "Type bypass 2",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POSBY2::value"
+            },
+            {
+                "name": "Ouverture bypass 3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "OUVBY3::value"
+            },
+            {
+                "name": "Type bypass 3 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POSBY3::raw_value"
+            },
+            {
+                "name": "Type bypass 3",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POSBY3::value"
+            },
+            {
+                "name": "Ouverture vanne HydroR",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "OUVHYDR::value"
+            },
+            {
+                "name": "Position 0 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS0::raw_value"
+            },
+            {
+                "name": "Position 0",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS0::value"
+            },
+            {
+                "name": "Température 0",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMP0::value"
+            },
+            {
+                "name": "Humidité 0",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "HUM0::value"
+            },
+            {
+                "name": "Position 1 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS1::raw_value"
+            },
+            {
+                "name": "Position 1",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS1::value"
+            },
+            {
+                "name": "Température 1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMP1::value"
+            },
+            {
+                "name": "Humidité 1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "HUM1::value"
+            },
+            {
+                "name": "Position 2 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS2::raw_value"
+            },
+            {
+                "name": "Position 2",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS2::value"
+            },
+            {
+                "name": "Température 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMP2::value"
+            },
+            {
+                "name": "Humidité 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "HUM2::value"
+            },
+            {
+                "name": "Position 3 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS3::raw_value"
+            },
+            {
+                "name": "Position 3",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS3::value"
+            },
+            {
+                "name": "Température 3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMP3::value"
+            },
+            {
+                "name": "Humidité 3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "HUM3::value"
+            },
+            {
+                "name": "Position 4 (numérique)",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS4::raw_value"
+            },
+            {
+                "name": "Position 4",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "POS4::value"
+            },
+            {
+                "name": "Température 4",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°C",
+                "logicalId": "TEMP4::value"
+            },
+            {
+                "name": "Humidité 4",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "HUM4::value"
+            },
+			{
+				"name": "Boost action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 0,
+					"maxValue": 200
+				},
+				"logicalId": "MSC:1,command:0,BOOST:#slider#"
+			},
+			{
+				"name": "Mode fonctionnement action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 1,
+					"maxValue": 3
+				},
+				"logicalId": "MSC:1,command:0,MODEFONC:#slider#"
+			},
+			{
+				"name": "Fonctions action",
+				"type": "action",
+				"subtype": "message",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"logicalId": "MSC:1,command:0,FONC:#message#"
+			},
+			{
+				"name": "Vacances action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 0,
+					"maxValue": 200
+				},
+				"logicalId": "MSC:1,command:0,VACS:#slider#"
+			},
+			{
+				"name": "Température consigne Elec action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 0,
+					"maxValue": 20
+				},
+				"logicalId": "MSC:1,command:0,TEMPEL:#slider#"
+			},
+			{
+				"name": "Température consigne Soufflage action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 20,
+					"maxValue": 45
+				},
+				"logicalId": "MSC:1,command:0,TEMPSOUF:#slider#"
+			},
+			{
+				"name": "Température consigne Hydro action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 8,
+					"maxValue": 28
+				},
+				"logicalId": "MSC:1,command:0,TEMPHYD:#slider#"
+			},
+			{
+				"name": "Température consigne Solar action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 18,
+					"maxValue": 30
+				},
+				"logicalId": "MSC:1,command:0,TEMPSOL:#slider#"
+			},
+			{
+				"name": "Commandes action",
+				"type": "action",
+				"subtype": "slider",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"configuration": {
+					"minValue": 1,
+					"maxValue": 255
+				},
+				"logicalId": "MSC:1,command:0,COMMAND:#slider#"
+			},
+			{
+				"name": "Fonctions heure système",
+				"type": "action",
+				"subtype": "message",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"logicalId": "MSC:1,command:1,HOUR:#message#"
+			},
+			{
+				"name": "Fonctions Agenda",
+				"type": "action",
+				"subtype": "message",
+				"isVisible": 1,
+				"isHistorized": 0,
+				"unite": "",
+				"logicalId": "MSC:1,command:2,AGENDA:#message#"
+			},
+            {
+                "name": "Capteur0",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR0::value"
+            },
+            {
+                "name": "Capteur1",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR1::value"
+            },
+            {
+                "name": "Capteur2",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR2::value"
+            },
+            {
+                "name": "Capteur3",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR3::value"
+            },
+            {
+                "name": "Capteur4",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR4::value"
+            },
+            {
+                "name": "Capteur5",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR5::value"
+            },
+            {
+                "name": "Capteur6",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR6::value"
+            },
+            {
+                "name": "Capteur7",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR7::value"
+            },
+            {
+                "name": "Capteur8",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR8::value"
+            },
+            {
+                "name": "Capteur9",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CAPTEUR9::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Ventilairsec",
+                "name": "VMI",
+                "doc": "",
+                "type": "Ventilation",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "",
+                "imglink": "d1079-01-00_vmi_ventilairsec"
+            }
+        ]
+    }
+}

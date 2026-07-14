@@ -1,0 +1,62 @@
+{
+    "a5-04-02": {
+        "name": "[A5-04-02] Range -20°C to +60°C and 0% to 100%",
+        "groupe" : "[A5-04] Temperature and Humidity Sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "04",
+            "type": "02"
+        },
+        "commands": [
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "TEMPERATURE"
+                },
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "logicalId": "TMP::value"
+            },
+            {
+                "name": "Humidité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "%",
+                "display": {
+                    "generic_type": "HUMIDITY"
+                },
+                "logicalId": "HUM::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Eltako",
+                "name": "Sonde radio humidité et température pour montage extérieur - FAFT60",
+                "doc": "",
+                "type": "Température",
+                "ref" : "FAFT60",
+                "comlink": "1931-eltako-sonde-radio-humidite-et-temperature-montage-exterieur-faft60-4010312310120",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et aimant",
+                "imglink": "a5-04-02_eltako_temperature_humidite_FAFT60"
+            }
+        ]
+    }
+}

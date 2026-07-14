@@ -1,0 +1,52 @@
+{
+    "a5-13-11": {
+        "name": "[A5-13-11]  Environmental Applications",
+        "groupe" : "[A5-13]  Sound Level",
+        "configuration": {
+            "rorg": "a5",
+            "func": "13",
+            "type": "11"
+        },
+        "commands": [
+            {
+                "name": "Average Sound level",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "logicalId": "DBAA::value",
+                "unite": "dBA"
+            },
+            {
+                "name": "Peak Sound Level",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "dBA",
+                "logicalId": "DBAP::value"
+            },
+            {
+                "name": "Source Localization",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "°",
+                "logicalId": "SL::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ]
+    }
+}

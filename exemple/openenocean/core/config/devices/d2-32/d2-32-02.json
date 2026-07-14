@@ -1,0 +1,65 @@
+{
+    "d2-32-02": {
+        "name": "[D2-32-02] Type 0x02",
+        "groupe" : "[D2-32] AC current clamp",
+        "configuration": {
+            "rorg": "d2",
+            "func": "32",
+            "type": "02"
+        },
+        "commands": [
+            {
+                "name": "Courant 1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A",
+                "logicalId": "CH1::value"
+            },
+			 {
+                "name": "Courant 2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A",
+                "logicalId": "CH2::value"
+            },
+			 {
+                "name": "Courant 3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A",
+                "logicalId": "CH3::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "PressacSensing",
+                "name": "Pince Ampérimétrique Enocean 3 voies",
+                "doc": "",
+                "type": "Courant",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Une fois placé attendre 30 secondes et appuyer sur le bouton",
+                "imglink": "d2-32-02_pressac_3_pinces"
+            }
+        ]
+    }
+}

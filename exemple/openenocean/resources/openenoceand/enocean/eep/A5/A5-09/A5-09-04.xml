@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<telegrams version="2.6.4" major_version="2" minor_version="6" revision="4">
+	<telegram rorg="0xA5" type="4BS" description="4BS Telegram">
+		<profiles func="0x09" description="Gas Sensor">
+			<profile type="0x04" description="CO2 sensor">
+				<data>
+					<value description="Humidity" shortcut="HUM" offset="0" size="8" unit="%">
+						<range>
+							<min>0</min>
+							<max>200</max>
+						</range>
+						<scale>
+							<min>0.000000</min>
+							<max>100.000000</max>
+						</scale>
+					</value>
+					<value description="Concentration" shortcut="CONC" offset="8" size="8" unit="ppm">
+						<range>
+							<min>0</min>
+							<max>255</max>
+						</range>
+						<scale>
+							<min>0.000000</min>
+							<max>2550.000000</max>
+						</scale>
+					</value>
+					<value description="Temperature" shortcut="TMP" offset="16" size="8" unit="°C">
+						<range>
+							<min>0</min>
+							<max>255</max>
+						</range>
+						<scale>
+							<min>0.000000</min>
+							<max>51.000000</max>
+						</scale>
+					</value>
+					<enum shortcut="LRNB" description="Learn Bit" offset="28" size="1">
+						<item description="Teach-In" value="0" />
+						<item description="Data" value="1" />
+					</enum>
+					<enum description="H-sensor" shortcut="HSN" offset="29" size="1">
+						<item description="Humidity sensor not available" value="0" />
+						<item description="Humidity sensor available" value="1" />
+					</enum>
+					<enum description="T-sensor" shortcut="TSN" offset="30" size="1">
+						<item description="Temperature sensor not available" value="0" />
+						<item description="Temperature sensor available" value="1" />
+					</enum>
+				</data>
+			</profile>
+		</profiles>
+	</telegram>
+</telegrams>

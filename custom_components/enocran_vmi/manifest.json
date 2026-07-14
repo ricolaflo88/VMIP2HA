@@ -1,0 +1,11 @@
+{
+  "domain": "enocran_vmi",
+  "name": "EnOcean VMI",
+  "documentation": "https://www.home-assistant.io/integrations/enocran_vmi",
+  "requirements": ["pyserial>=3.0"],
+  "version": "0.1.0",
+  "dependencies": [],
+  "codeowners": [],
+  "iot_class": "local_polling",
+  "platforms": ["sensor"]
+}

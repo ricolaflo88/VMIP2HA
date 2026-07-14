@@ -1,0 +1,132 @@
+{
+    "recepteur_2_canaux": {
+        "name": "Récepteur 2 canaux",
+        "groupe" : "[Télécommande] Récepteurs",
+        "configuration": {
+            "rorg": "f6",
+            "func": "02",
+            "type": "02"
+        },
+        "commands": [
+            {
+                "name": "Etat-1",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "LIGHT_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": ""
+            },
+            {
+                "name": "On-1",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-1",
+                "logicalId": "generic:1,type:switch,R1:0,T21:1,NU:1",
+                "configuration": {
+                    "updateCmdId": "Etat-1",
+                    "updateCmdToValue": "1"
+                },
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Off-1",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-1",
+                "logicalId": "generic:1,R1:1,type:switch,T21:1,NU:1",
+                "configuration": {
+                    "updateCmdId": "Etat-1",
+                    "updateCmdToValue": "0"
+                },
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Etat-2",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "LIGHT_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": ""
+            },
+            {
+                "name": "On-2",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-2",
+                "logicalId": "generic:1,R1:2,type:switch,T21:1,NU:1",
+                "configuration": {
+                    "updateCmdId": "Etat-2",
+                    "updateCmdToValue": "1"
+                },
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Off-2",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-2",
+                "logicalId": "generic:1,R1:3,type:switch,T21:1,NU:1",
+                "configuration": {
+                    "updateCmdId": "Etat-2",
+                    "updateCmdToValue": "0"
+                },
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Trio2sys",
+                "name": "Récepteur 2 canaux O2line",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "",
+                "comlink": "",
+                "remark": "Module récepteur seulement ne s'inclue pas mais s'appaire",
+                "inclusion" : "Ajouter sans inclure. Choisir le profil. Ensuite mettre le module en learn sur le canal 1 puis cliquez sur tester ON-1 dans jeedom, répétez l'opération avec ON-2 pour le deuxième canal",
+                "imglink": "recepteur_2_canaux_trio2sys_recepteur_2_canaux"
+            }
+        ]
+    }
+}

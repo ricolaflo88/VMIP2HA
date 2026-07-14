@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="25px" viewBox="0 0 40 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Toggle_inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs class="activeSelect">
+        <linearGradient class="activeSelect" x1="50%" y1="0%" x2="50%" y2="99.0214445%" id="linearGradient-1">
+            <stop  class="activeSelect" stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop  class="activeSelect" stop-color="#000000" stop-opacity="0.02" offset="80%"></stop>
+            <stop  class="activeSelect" stop-color="#000000" stop-opacity="0.04" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient  class="activeSelect" x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop  class="activeSelect" stop-color="#FFFFFF" stop-opacity="0.12" offset="0%"></stop>
+            <stop  class="activeSelect" stop-color="#FFFFFF" stop-opacity="0.06" offset="20%"></stop>
+            <stop  class="activeSelect" stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <circle class="activeSelect" id="path-3" cx="10" cy="10" r="10"></circle>
+        <filter  class="activeSelect" x="-20.0%" y="-20.0%" width="140.0%" height="150.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset  class="activeSelect" dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur  class="activeSelect" stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite  class="activeSelect" in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix  class="activeSelect" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.237601902 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset class="activeSelect" dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur  class="activeSelect" stdDeviation="1" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feComposite  class="activeSelect" in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"></feComposite>
+            <feColorMatrix  class="activeSelect" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode class="activeSelect" in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode class="activeSelect" in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Toggle_inactive" class="activeSelect" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="switch-on" class="activeSelect" transform="translate(2.000000, 2.000000)">
+            <path class="activeSelect" d="M37,10 C37,13.9 33.9,17 30,17 L10,17 C6.1,17 3,13.9 3,10 L3,10 C3,6.1 6.1,3 10,3 L30,3 C33.9,3 37,6.1 37,10 L37,10 L37,10 Z" id="track" fill="#CFE1F3"></path>
+            <g id="knob" class="activeSelect">
+                <use class="activeSelect" fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                <circle class="activeSelect" stroke="url(#linearGradient-1)" stroke-width="0.5" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" cx="10" cy="10" r="9.75"></circle>
+                <circle class="activeSelect" stroke="url(#linearGradient-2)" stroke-width="0.5" stroke-linejoin="square" cx="10" cy="10" r="9.75"></circle>
+            </g>
+        </g>
+    </g>
+    <defs class="desactiveSelect">
+        <linearGradient class="desactiveSelect" x1="50%" y1="0%" x2="50%" y2="99.0214445%" id="linearGradient-1-desactive">
+            <stop class="desactiveSelect" stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop class="desactiveSelect" stop-color="#000000" stop-opacity="0.02" offset="80%"></stop>
+            <stop class="desactiveSelect" stop-color="#000000" stop-opacity="0.04" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient class="desactiveSelect" x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2-desactive">
+            <stop class="desactiveSelect" stop-color="#FFFFFF" stop-opacity="0.12" offset="0%"></stop>
+            <stop class="desactiveSelect" stop-color="#FFFFFF" stop-opacity="0.06" offset="20%"></stop>
+            <stop class="desactiveSelect" stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <circle class="desactiveSelect" id="path-3-desactive" cx="27" cy="10" r="10" ></circle>
+        <filter class="desactiveSelect" x="-20.0%" y="-20.0%" width="140.0%" height="150.0%" filterUnits="objectBoundingBox" id="filter-4-desactive">
+            <feOffset class="desactiveSelect" dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur class="desactiveSelect" stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite class="desactiveSelect" in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix class="desactiveSelect" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.237601902 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset class="desactiveSelect" dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur class="desactiveSelect" stdDeviation="1" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feComposite class="desactiveSelect" in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"></feComposite>
+            <feColorMatrix class="desactiveSelect" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode class="desactiveSelect" in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode class="desactiveSelect" in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Toggle_selected" class="desactiveSelect" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="switch-on" class="desactiveSelect" transform="translate(1.000000, 3.000000)">
+            <path class="desactiveSelect" d="M34,10 C34,13.9 30.9,17 27,17 L7,17 C3.1,17 0,13.9 0,10 L0,10 C0,6.1 3.1,3 7,3 L27,3 C30.9,3 34,6.1 34,10 L34,10 L34,10 Z" id="track" fill="#4D009A"></path>
+            <g class="desactiveSelect" id="knob">
+                <use class="desactiveSelect" fill="black" fill-opacity="1" filter="url(#filter-4-desactive)" xlink:href="#path-3-desactive"></use>
+                <circle class="desactiveSelect" stroke="url(#linearGradient-1-desactive)" stroke-width="0.5" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" cx="27" cy="10" r="9.75"></circle>
+                <circle class="desactiveSelect" stroke="url(#linearGradient-2-desactive)" stroke-width="0.5" stroke-linejoin="square" cx="27" cy="10" r="9.75"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,260 @@
+{
+    "a5-09-04": {
+        "name": "[A5-09-04] CO2 Sensor",
+        "groupe" : "[A5-09] Gas sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "09",
+            "type": "04"
+        },
+        "commands": [
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "display": {
+                    "generic_type": "TEMPERATURE"
+                },
+                "logicalId": "TMP::value"
+            },
+            {
+                "name": "Humidité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "%",
+                "display": {
+                    "generic_type": "HUMIDITY"
+                },
+                "logicalId": "HUM::value"
+            },
+            {
+                "name": "CO2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "ppm",
+                "display": {
+                    "generic_type": "CO2"
+                },
+                "logicalId": "CONC::value"
+            },
+            {
+                "name": "Bouton",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "",
+                "logicalId": "BUTT::raw_value"
+            },
+            {
+                "name": "IAQ Global",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_GLOBAL::raw_value"
+            },
+            {
+                "name": "IAQ Global Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_GLOBAL::value"
+            },
+            {
+                "name": "IAQ Source",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_SOURCE::raw_value"
+            },
+            {
+                "name": "IAQ Source Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_SOURCE::value"
+            },
+            {
+                "name": "IAQ Dry",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DRY::raw_value"
+            },
+            {
+                "name": "IAQ Dry Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DRY::value"
+            },
+            {
+                "name": "IAQ Mould",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_MOULD::raw_value"
+            },
+            {
+                "name": "IAQ Mould Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_MOULD::value"
+            },
+            {
+                "name": "IAQ DM",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DM::raw_value"
+            },
+            {
+                "name": "IAQ DM Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_DM::value"
+            },
+            {
+                "name": "IAQ Co2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO2::raw_value"
+            },
+            {
+                "name": "IAQ Co2 Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO2::value"
+            },
+            {
+                "name": "IAQ Co",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO::raw_value"
+            },
+            {
+                "name": "IAQ Co Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "IAQ_CO::value"
+            },
+            {
+                "name": "HCI",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HCI::raw_value"
+            },
+            {
+                "name": "HCI Label",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "HCI::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nanosense",
+                "name": "Sonde CO2 qualité d'air E4000",
+                "doc": "",
+                "type": "CO2,Qualité d'air",
+                "ref" : "E4000",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et mode appairage",
+                "imglink": "a5-09-04_nanosense_E4000_CO2"
+            },
+			{
+                "manufacturer": "PressacSensing",
+                "name": "Sonde Co2 Température Humidité",
+                "doc": "",
+                "type": "CO2,Température,Humidité",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et mode appairage",
+                "imglink": "a5-09-04_pressac_co2_humidite_temperature"
+            },
+            {
+                "manufacturer": "Thermokon",
+                "name": "Capteur Co2 Température Humidité",
+                "doc": "",
+                "type": "CO2,Température,Humidité",
+                "ref" : "SR04 CO2",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et 1 clic sur le bouton LRN",
+                "imglink": "a5-09-04_thermokon_co2_humidite_temperature"
+            },
+			{
+                "manufacturer": "Nexelec",
+                "name": "Insafe+ Carbon Sonde Co2 Température Humidité",
+                "doc": "",
+                "type": "CO2,Température,Humidité",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et triple clic sur bouton",
+                "imglink": "a5-09-04_nexelec_insafe+_carbon_co2_humidite_temperature"
+            }
+        ]
+    }
+}

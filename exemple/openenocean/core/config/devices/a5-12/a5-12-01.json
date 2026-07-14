@@ -1,0 +1,72 @@
+{
+    "a5-12-01": {
+        "name": "[A5-12-01]  Electricity",
+        "groupe" : "[A5-12]  Automated Meter Reading (AMR)",
+        "configuration": {
+            "rorg": "a5",
+            "func": "12",
+            "type": "01"
+        },
+        "commands": [
+            {
+                "name": "Puissance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P1"
+            },
+            {
+                "name": "Consommation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C1"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Eltako",
+                "name": "Module de comptage d'énergie 65A",
+                "doc": "",
+                "type": "Compteur",
+                "ref" : "FWZ12-65A",
+                "comlink": "2837-eltako-module-de-comptage-d-energie-65a-4010312311059",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et brancher le compteur",
+                "imglink": "a5-12-01_eltako_fw12_65"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Module de comptage d'énergie 16A",
+                "doc": "",
+                "type": "Compteur",
+                "ref" : "FWZ12-16A",
+                "comlink": "2836-eltako-module-de-comptage-d-energie-16a-4010312303184",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et brancher le compteur",
+                "imglink": "a5-12-01_eltako_fw12_16"
+            },
+            {
+                "manufacturer": "Avidsen",
+                "name": "Module Téléinfo",
+                "doc": "",
+                "type": "Compteur",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et mettre le module en learn",
+                "imglink": "a5-12-01_avidsen_tic"
+            }
+        ]
+    }
+}

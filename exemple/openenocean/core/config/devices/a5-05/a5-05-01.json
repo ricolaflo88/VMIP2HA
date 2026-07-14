@@ -1,0 +1,34 @@
+{
+    "a5-05-01": {
+        "name": "[A5-05-01] Range 500 to 1150 hPa",
+        "groupe" : "[A5-05] Barometric Sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "05",
+            "type": "01"
+        },
+        "commands": [
+            {
+                "name": "Pression",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "hPa",
+                "logicalId": "BAR::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ]
+    }
+}

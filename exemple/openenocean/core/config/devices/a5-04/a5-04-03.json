@@ -1,0 +1,51 @@
+{
+    "a5-04-03": {
+        "name": "[A5-04-03] Range -20°C to +60°C and 10bit 0% to 100%",
+        "groupe" : "[A5-04] Temperature and Humidity Sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "04",
+            "type": "03"
+        },
+        "commands": [
+            {
+                "name": "Température",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "TEMPERATURE"
+                },
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "logicalId": "TMP::value"
+            },
+            {
+                "name": "Humidité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "%",
+                "display": {
+                    "generic_type": "HUMIDITY"
+                },
+                "logicalId": "HUM::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+        ]
+    }
+}

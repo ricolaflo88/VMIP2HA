@@ -1,0 +1,107 @@
+{
+    "f6-10-00": {
+        "name": "[F6-10-00] Window Handle",
+        "groupe" : "[F6-10] Mechanical handle",
+        "configuration": {
+            "rorg": "f6",
+            "func": "10",
+            "type": "00",
+            "ignoreRelease": 0,
+            "allButtons": 0
+        },
+        "commands": [
+            {
+                "name": "Etat label",
+                "type": "info",
+                "subtype": "string",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "positionlabel"
+            },
+			{
+                "name": "Etat",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "position"
+            },
+			{
+                "name": "Etat simple",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "positionbinary"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "La Croisée DS",
+                "name": "Poignée de fenêtre D-Sign",
+                "doc": "",
+                "type": "Poignée",
+                "ref" : "7716",
+                "comlink": "",
+                "remark": "Bien choisir le bon profil après inclusion",
+                "inclusion" : "Mode inclusion auto et tourner la poignée",
+                "imglink": "f6-10-00_1_LA_CROISEE_DS_7716"
+            },{
+                "manufacturer": "La Croisée DS",
+                "name": "Poignée de fenêtre Helium",
+                "doc": "",
+                "type": "Poignée",
+                "ref" : "7079",
+                "comlink": "",
+                "remark": "Bien choisir le bon profil après inclusion",
+                "inclusion" : "Mode inclusion auto et tourner la poignée",
+                "imglink": "f6-10-00_1_LA_CROISEE_DS_7079"
+            },{
+                "manufacturer": "Hoppe",
+                "name": "Poignée de fenêtre Sécusignal Atlanta Aluminium",
+                "doc": "",
+                "type": "Poignée",
+                "ref" : "HOP2473207",
+                "comlink": "1062-hoppe-poignee-fenetre-secusignal-atlanta-alu-4012789023428",
+                "remark": "Bien choisir le bon profil après inclusion",
+                "inclusion" : "Mode inclusion auto et tourner la poignée",
+                "imglink": "f6-10-00_hoppe_poignee-aluminium"
+            },
+			{
+                "manufacturer": "Hoppe",
+                "name": "Poignée de fenêtre Sécusignal Atlanta Blanche",
+                "doc": "",
+                "type": "Poignée",
+                "ref" : "HOP2614680",
+                "comlink": "1063-hoppe-poignee-fenetre-secusignal-atlanta-blanc-4012789104158",
+                "remark": "Bien choisir le bon profil après inclusion",
+                "inclusion" : "Mode inclusion auto et tourner la poignée",
+                "imglink": "f6-10-00_hoppe_poignee-blanche"
+            }
+        ]
+    }
+}

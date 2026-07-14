@@ -1,0 +1,62 @@
+{
+    "a5-14-05": {
+        "name": "[A5-14-05]  Vibration/Tilt, Supply Voltage monitor",
+        "groupe" : "[A5-14]  Multi Func Sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "14",
+            "type": "05"
+        },
+        "commands": [
+            {
+                "name": "Bruit",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "display": {
+                    "invertBinary": "1"
+                },
+                "logicalId": "VIB::raw_value",
+				 "template": {
+                "dashboard": "alert", 
+                "mobile": "alert"
+            }
+            },
+            {
+                "name": "Voltage",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "V",
+                "logicalId": "SVC::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Avidsen",
+                "name": "Détecteur de bruit",
+                "doc": "",
+                "type": "Détecteur",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et mettre le module en learn",
+                "imglink": "a5-14-05_avidsen_sound"
+            }
+        ]
+    }
+}

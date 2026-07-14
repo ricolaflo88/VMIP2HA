@@ -1,0 +1,188 @@
+{
+    "f6-02-02.poussoir": {
+        "name": "[F6-02-02] Light and Blind Control - Poussoir",
+        "groupe" : "[F6-02] Rocker Switch, 2 Rocker",
+        "configuration": {
+            "rorg": "f6",
+            "func": "02",
+            "type": "02",
+            "ignoreRelease": 0 ,
+            "allButtons": 1
+        },
+        "commands": [
+            {
+                "name": "Bouton 1",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_1"
+            },
+            {
+                "name": "Bouton 2",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_2"
+            },
+            {
+                "name": "Bouton 3",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_3"
+            },
+            {
+                "name": "Bouton 4",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_4"
+            },
+            {
+                "name": "Multiple",
+                "type": "info",
+                "subtype": "string",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "multiple"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nodon",
+                "name": "Soft Remote blue tech",
+                "doc": "",
+                "type": "Télécommande",
+                "ref" : "CRC-2-6-02",
+                "comlink": "2624-nodon-soft-remote-enocean-tech-blue-3700313920053",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_soft_remote_blue_tech"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Soft Remote cozy grey",
+                "doc": "",
+                "type": "Télécommande",
+                "ref" : "CRC-2-6-03",
+                "comlink": "2625-nodon-soft-remote-enocean-cozy-grey-3700313920060",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_soft_remote_cozy_grey"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Soft Remote blue lagoon",
+                "doc": "",
+                "type": "Télécommande",
+                "ref" : "CRC-2-6-06",
+                "comlink": "2898-nodon-soft-remote-enocean-lagoon-3700313920312",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_soft_remote_lagoon"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Soft Remote softberry",
+                "doc": "",
+                "type": "Télécommande",
+                "ref" : "CRC-2-6-05",
+                "comlink": "2900-nodon-soft-remote-enocean-softberry-3700313920305",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_soft_remote_softberry"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Soft Remote wasabi",
+                "doc": "",
+                "type": "Télécommande",
+                "ref" : "CRC-2-6-04",
+                "comlink": "2899-nodon-soft-remote-enocean-wasabi-3700313920299",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_soft_remote_wasabi"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Soft Remote blanc",
+                "doc": "",
+                "type": "Télécommande",
+                "ref" : "UBIA1501W",
+                "comlink": "2648-ubiwizz-telecommande-ubi-remote-blanc-3553740015966",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_soft_remote_blanc"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Interrupteur mural Z-Wave plus - Cozi White",
+                "doc": "",
+                "type": "Interrupteur",
+                "ref" : "CWS-3-1-01",
+                "comlink": "2995-nodon-interrupteur-mural-z-wave-plus-cozi-white-3700313920268",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_wall_switch_blanc"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Interrupteur mural EnOcean - Cozi Grey",
+                "doc": "",
+                "type": "Interrupteur",
+                "ref" : "CWS-2-1-02",
+                "comlink": "2628-nodon-interrupteur-mural-enocean-cozi-grey-3700313920084",
+                "remark": "Disponible en plusieurs coloris. Deux modes de fonctionnement possible dans Jeedom (on/off sur deux boutons ou toggle sur 4 boutons). Les appuis multiples sont gérés.",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_wall_switch_marron"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Convertisseur infrarouge/EnOcean avec port USB pour télécommande Harmony Logitech - FIW-USB",
+                "doc": "",
+                "type": "Infrarouge",
+                "ref" : "FIW-USB",
+                "comlink": "3263-eltako-convertisseur-infrarougeenocean-avec-port-usb-4010312311158",
+                "remark": "Créera autant d'équipement que de famille boutons disponibles dans la documentation de modules (à chaque famille une inclusion est nécessaire)",
+                "inclusion" : "Mode inclusion auto et appui sur un bouton",
+                "imglink": "f6-02-02_eltako_ir_transmetteur"
+            }
+        ]
+    }
+}

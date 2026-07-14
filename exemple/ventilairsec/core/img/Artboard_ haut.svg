@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Artboard_ haut</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5,10.999464 C5,10.780464 5.072,10.559464 5.219,10.375464 C5.564,9.94346402 6.193,9.87446402 6.625,10.219464 L11,13.719464 L15.375,10.219464 C15.807,9.87446402 16.436,9.94346402 16.781,10.375464 C17.125,10.806464 17.056,11.436464 16.625,11.780464 L11.625,15.780464 C11.259,16.073464 10.741,16.073464 10.375,15.780464 L5.375,11.780464 C5.128,11.583464 5,11.292464 5,10.999464" id="path-1"></path>
+        <path d="M6,9.99946402 C6,9.78046402 6.072,9.55946402 6.219,9.37546402 C6.564,8.94346402 7.193,8.87446402 7.625,9.21946402 L12,12.719464 L16.375,9.21946402 C16.807,8.87446402 17.436,8.94346402 17.781,9.37546402 C18.125,9.80646402 18.056,10.436464 17.625,10.780464 L12.625,14.780464 C12.259,15.073464 11.741,15.073464 11.375,14.780464 L6.375,10.780464 C6.128,10.583464 6,10.292464 6,9.99946402" id="path-3"></path>
+    </defs>
+    <g id="Artboard_-haut" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-19">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Arrow(Down)" fill="#000000" opacity="0.2" transform="translate(10.999865, 13.000107) rotate(-180.000000) translate(-10.999865, -13.000107) " xlink:href="#path-1"></use>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Arrow(Down)" fill="#4D009A" transform="translate(11.999865, 12.000107) rotate(-180.000000) translate(-11.999865, -12.000107) " xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>

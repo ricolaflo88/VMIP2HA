@@ -1,0 +1,140 @@
+{
+    "d2-01-0a": {
+        "name": "[D2-01-0A] Type 0A",
+        "groupe" : "[D2-01] Electronic switches and dimmers with Energy Measurement and Local Control",
+        "configuration": {
+            "rorg": "d2",
+            "func": "01",
+            "type": "0a",
+            "hasrepeat" : 1
+        },
+        "commands": [
+            {
+                "name": "On",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "type:switch,command:1,IO:1,OV:100",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Off",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "type:switch,command:1,IO:1,OV:0",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "ENERGY_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "OV::raw_value"
+            },
+            {
+                "name": "Courant",
+                "type": "info",
+                "subtype": "binary",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "",
+                "logicalId": "PFD::raw_value",
+                "display": {
+                    "invertBinary": "1"
+                }
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "parameters": [
+            {
+                "name": "Taught-in devices",
+                "shortcut" : "DE",
+                "channel" : "1",
+                "cmd" : 2,
+                "description": "Si le paramètre est activé, tous les émetteurs appris par la prise peuvent la contrôler. Si le paramètre est désactivé, seule la centrale domotique peut contrôler la prise.",
+                "type": "binary"
+            },
+            {
+                "name": "Local Control",
+                "shortcut" : "LC",
+                "channel" : "1",
+                "cmd" : 2,
+                "description": "Cette option permet d’activer ou de désactiver l’usage manuel de la prise. Dans les deux cas l’accès au mode apprentissage et réinitialisation d’usine reste disponible.",
+                "type": "binary"
+            },
+            {
+                "name": "User interface day/night mode",
+                "shortcut" : "DN",
+                "channel" : "1",
+                "cmd" : 2,
+                "description": "Si le paramètre est sur off, le voyant de la prise s’allume lorsque celle-ci est activée et s’éteint lorsqu’elle est désactivée. Si le paramètre est sur on, le voyant de la prise reste éteint quelque soit l’état de celle-ci.",
+                "type": "binary"
+            },
+            {
+                "name": "Power failure",
+                "shortcut" : "PF",
+                "channel" : "1",
+                "cmd" : 2,
+                "description": "Cette option permet de détecter la mise hors tension de la prise due à une coupure de courant afin d’en informer la centrale domotique. Aucune information n’est transmise si cette option est désactivée.",
+                "type": "binary"
+            },
+            {
+                "name": "Default state",
+                "shortcut" : "DS",
+                "channel" : "1",
+                "cmd" : 2,
+                "description": "Cette option permet de définir l’état de la prise lors de son branchement ou après une coupure de courant.",
+                "type": "list",
+                "values" : {"OFF" : 0, "ON" : 1, "Remember previous state" : 10}
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nodon",
+                "name": "Prise intelligente EnOcean",
+                "doc": "",
+                "type": "Prise",
+                "ref" : "ASP-2-1-00",
+                "comlink": "2631-nodon-prise-intelligente-enocean-type-eu-3700313920008",
+                "remark": "Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et appui long (2s) sur le bouton learn",
+                "imglink": "d2-01-0a_smartplug_nodon"
+            }
+        ]
+    }
+}

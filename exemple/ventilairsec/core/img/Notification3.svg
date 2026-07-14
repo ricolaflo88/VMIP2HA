@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Notification3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Notification3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="baseline-notifications-24px" transform="translate(3.000000, 4.000000)" fill-rule="nonzero">
+            <path d="M9,23.4375 C10.2375,23.4375 11.25,22.425 11.25,21.1875 L6.75,21.1875 C6.75,22.425 7.75125,23.4375 9,23.4375 Z M15.75,16.6875 L15.75,11.0625 C15.75,7.60875 13.905,4.7175 10.6875,3.9525 L10.6875,3.1875 C10.6875,2.25375 9.93375,1.5 9,1.5 C8.06625,1.5 7.3125,2.25375 7.3125,3.1875 L7.3125,3.9525 C4.08375,4.7175 2.25,7.5975 2.25,11.0625 L2.25,16.6875 L0,18.9375 L0,20.0625 L18,20.0625 L18,18.9375 L15.75,16.6875 Z" id="Shape" fill="#000000" opacity="0.2"></path>
+            <path d="M10,22.4375 C11.2375,22.4375 12.25,21.425 12.25,20.1875 L7.75,20.1875 C7.75,21.425 8.75125,22.4375 10,22.4375 Z M16.75,15.6875 L16.75,10.0625 C16.75,6.60875 14.905,3.7175 11.6875,2.9525 L11.6875,2.1875 C11.6875,1.25375 10.93375,0.5 10,0.5 C9.06625,0.5 8.3125,1.25375 8.3125,2.1875 L8.3125,2.9525 C5.08375,3.7175 3.25,6.5975 3.25,10.0625 L3.25,15.6875 L1,17.9375 L1,19.0625 L19,19.0625 L19,17.9375 L16.75,15.6875 Z" id="Shape" fill="#4D009A"></path>
+        </g>
+        <g id="Group-5" transform="translate(14.000000, 3.000000)">
+            <circle id="Oval" fill-opacity="0.2" fill="#000000" cx="6" cy="7" r="6"></circle>
+            <circle id="Oval" fill="#DB4437" cx="7" cy="6" r="6"></circle>
+        </g>
+    </g>
+</svg>

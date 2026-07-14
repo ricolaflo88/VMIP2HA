@@ -1,0 +1,276 @@
+{
+    "d2-01-12": {
+        "name": "[D2-01-12] Type 12",
+        "groupe" : "[D2-01] Electronic switches and dimmers with Energy Measurement and Local Control",
+        "configuration": {
+            "rorg": "d2",
+            "func": "01",
+            "type": "12",
+            "ignoreRelease": 1,
+            "hasrefresh" : {"command":3,"CMD":3,"IO":30},
+            "hasrepeat" : 1,
+	    "default": "d2-01/d2-01-12_micromodule_nodon_2_canaux"
+        },
+        "commands": [
+            {
+                "name": "On-1",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-1",
+                "logicalId": "CMD:1,IO:0,OV:100",
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Off-1",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-1",
+                "logicalId": "CMD:1,IO:0,OV:0",
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Etat-1",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "LIGHT_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "channel0-OV"
+            },
+            {
+                "name": "On-2",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-2",
+                "logicalId": "CMD:1,IO:1,OV:100",
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Off-2",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat-2",
+                "logicalId": "CMD:1,IO:1,OV:0",
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Etat-2",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "LIGHT_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "channel1-OV"
+            },
+            {
+                "name": "On Tous",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "NONE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CMD:1,IO:30,OV:100"
+            },
+            {
+                "name": "Off Tous",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "NONE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CMD:1,IO:30,OV:0"
+            },
+			{
+				"name": "Scene", 
+				"type": "info", 
+				"isVisible": 0, 
+				"isHistorized": 0,
+				"subtype": "numeric",
+				"template": {
+					"dashboard": "tile", 
+					"mobile": "tile"
+				},
+				"logicalId": "R1::raw_value"
+			}, 
+            {
+                "name": "Rafraîchir",
+                "type": "action",
+                "subtype": "other",
+				"configuration" : {
+					"isRefreshCmd" : 1
+				},
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:3,CMD:3,IO:30"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "parameters": [
+            {
+                "name": "Taught-in devices",
+                "shortcut" : "DE",
+                "channel" : "0|1",
+                "description": "Si le paramètre est activé, tous les émetteurs appris par la prise peuvent la contrôler. Si le paramètre est désactivé, seule la centrale domotique peut contrôler la prise.",
+                "type": "binary"
+            },
+            {
+                "name": "Local Control",
+                "shortcut" : "LC",
+                "channel" : "0|1",
+                "description": "Cette option permet d’activer ou de désactiver l’usage manuel de la prise. Dans les deux cas l’accès au mode apprentissage et réinitialisation d’usine reste disponible.",
+                "type": "binary"
+            },
+            {
+                "name": "User interface day/night mode",
+                "shortcut" : "DN",
+                "channel" : "0|1",
+                "description": "Si le paramètre est sur off, le voyant de la prise s’allume lorsque celle-ci est activée et s’éteint lorsqu’elle est désactivée. Si le paramètre est sur on, le voyant de la prise reste éteint quelque soit l’état de celle-ci.",
+                "type": "binary"
+            },
+            {
+                "name": "Default state canal 1",
+                "shortcut" : "DS|1",
+                "channel" : "0",
+                "description": "Cette option permet de définir l’état de la prise lors de son branchement ou après une coupure de courant (canal 1).",
+                "type": "list",
+                "values" : {"OFF" : 0, "ON" : 1, "Remember previous state" : 10}
+            },
+            {
+                "name": "Default state canal 2",
+                "shortcut" : "DS|2",
+                "channel" : "1",
+                "description": "Cette option permet de définir l’état de la prise lors de son branchement ou après une coupure de courant (canal 2).",
+                "type": "list",
+                "values" : {"OFF" : 0, "ON" : 1, "Remember previous state" : 10}
+            },
+            {
+                "name": "External Switch/Push Button Type",
+                "shortcut" : "EBM",
+                "channel" : "0|1",
+                "cmd" : 11,
+                "description": "Cette option permet de sélectionner le type de bouton(s) filaire(s) connecté(s) au module encastré (monostable ou bistable). Par défaut, le module est configuré en mode « Auto-Détection ». La même configuration est appliquée aux 2 interrupteurs. ",
+                "type": "list",
+                "values" : {"External Switch" : 1, "External Push Button" : 10, "Auto detect" : 11}
+            },
+            {
+                "name": "Auto OFF Timer canal 1",
+                "shortcut" : "AOT|1",
+                "channel" : "0",
+                "cmd" : 11,
+                "description": "Lorsque que le Timer est activé avec une valeur valide (0.1 à 3600 sec), à chaque fois qu’une sortie (O1 ou O2) du module encastré est activée (ON), celle-ci sera automatiquement désactivée (OFF) quand le temps sera écoulé (canal 1) (multipliez la valeur voulue par 10 doit donner un entier, 0 désactive l'option).",
+                "type": "value"
+            },
+            {
+                "name": "Auto OFF Timer canal 2",
+                "shortcut" : "AOT|2",
+                "channel" : "1",
+                "cmd" : 11,
+                "description": "Lorsque que le Timer est activé avec une valeur valide (0.1 à 3600 sec), à chaque fois qu’une sortie (O1 ou O2) du module encastré est activée (ON), celle-ci sera automatiquement désactivée (OFF) quand le temps sera écoulé (canal 2) (multipliez la valeur voulue par 10 doit donner un entier, 0 désactive l'option).",
+                "type": "value"
+            },
+            {
+                "name": "Delay Radio OFF Timer canal 1",
+                "shortcut" : "DOT|1",
+                "channel" : "0",
+                "cmd" : 11,
+                "description": "Lorsque que le Timer est activé avec une valeur valide (0.1 à 3600 sec), à chaque fois qu’une sortie (O1 ou O2) est désactivée (OFF) par Radio, cette action sera retardée de la valeur du Timer (canal 1) (multipliez la valeur voulue par 10 doit donner un entier, 0 désactive l'option).",
+                "type": "value"
+            },
+            {
+                "name": "Delay Radio OFF Timer canal 2",
+                "shortcut" : "DOT|2",
+                "channel" : "1",
+                "cmd" : 11,
+                "description": "Lorsque que le Timer est activé avec une valeur valide (0.1 à 3600 sec), à chaque fois qu’une sortie (O1 ou O2) est désactivée (OFF) par Radio, cette action sera retardée de la valeur du Timer (canal 2) (multipliez la valeur voulue par 10 doit donner un entier, 0 désactive l'option).",
+                "type": "value"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nodon",
+                "name": "Micromodule commutateur double EnOcean",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "SIN-2-2-00",
+                "comlink": "3341-nodon-micromodule-commutateur-double-enocean-3700313920374",
+                "remark": "Bien s'assurer que le micromodule sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et triple appui sur le bouton learn",
+                "imglink": "d2-01-12_micromodule_nodon_2_canaux"
+            },
+			{
+                "manufacturer": "Avidsen",
+                "name": "Micromodule commutateur double EnOcean",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "",
+                "comlink": "",
+                "remark": "Bien s'assurer que le micromodule sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et appui long puis relachement",
+                "imglink": "d2-01-12_micromodule_avidsen_2_canaux"
+            }
+        ]
+    }
+}

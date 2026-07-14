@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="WeekInactif" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>week_inactif</title>
+    <desc>Created with Sketch.</desc>
+    <g id="week_inactif" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+        <g id="Group">
+            <g id="outline-view_week-24px">
+                <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M21,4 L3,4 C2.45,4 2,4.45 2,5 L2,19 C2,19.55 2.45,20 3,20 L21,20 C21.55,20 22,19.55 22,19 L22,5 C22,4.45 21.55,4 21,4 Z M8,18 L4,18 L4,6 L8,6 L8,18 Z M14,18 L10,18 L10,6 L14,6 L14,18 Z M20,18 L16,18 L16,6 L20,6 L20,18 Z" id="Shape" fill="#4D009A" fill-rule="nonzero"></path>
+            </g>
+            <rect id="Rectangle" fill="#FFFFFF" x="4" y="6" width="16" height="12"></rect>
+            <polygon id="Path" fill="#FFFFFF" points="4 18 7.25 18 7.25 6 4 6"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="8.25 18 11.5 18 11.5 6 8.25 6"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="12.5 18 15.75 18 15.75 6 12.5 6"></polygon>
+            <rect id="Rectangle" fill="#4D009A" x="7.25" y="6" width="1" height="12"></rect>
+            <rect id="Rectangle" fill="#4D009A" x="11.5" y="6" width="1" height="12"></rect>
+            <rect id="Rectangle" fill="#4D009A" x="15.75" y="6" width="1" height="12"></rect>
+        </g>
+    </g>
+</svg>

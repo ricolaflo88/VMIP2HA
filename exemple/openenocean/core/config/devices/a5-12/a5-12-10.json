@@ -1,0 +1,326 @@
+{
+    "a5-12-10": {
+        "name": "[A5-12-10]  Current meter 16 channels",
+        "groupe" : "[A5-12]  Automated Meter Reading (AMR)",
+        "configuration": {
+            "rorg": "a5",
+            "func": "12",
+            "type": "10"
+        },
+        "commands": [
+            {
+                "name": "Puissance-1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P1"
+            },
+            {
+                "name": "Conso-1",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C1"
+            },
+            {
+                "name": "Puissance-2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P2"
+            },
+            {
+                "name": "Conso-2",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C2"
+            },
+            {
+                "name": "Puissance-3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P3"
+            },
+            {
+                "name": "Conso-3",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C3"
+            },
+            {
+                "name": "Puissance-4",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P4"
+            },
+            {
+                "name": "Conso-4",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C4"
+            },
+            {
+                "name": "Puissance-5",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P5"
+            },
+            {
+                "name": "Conso-5",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C5"
+            },
+            {
+                "name": "Puissance-6",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P6"
+            },
+            {
+                "name": "Conso-6",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C6"
+            },
+            {
+                "name": "Puissance-7",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P7"
+            },
+            {
+                "name": "Conso-7",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C7"
+            },
+            {
+                "name": "Puissance-8",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P8"
+            },
+            {
+                "name": "Conso-8",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C8"
+            },
+            {
+                "name": "Puissance-9",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P9"
+            },
+            {
+                "name": "Conso-9",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C9"
+            },
+            {
+                "name": "Puissance-10",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P10"
+            },
+            {
+                "name": "Conso-10",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C10"
+            },
+            {
+                "name": "Puissance-11",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P11"
+            },
+            {
+                "name": "Conso-11",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C11"
+            },
+            {
+                "name": "Puissance-12",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "mA",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P12"
+            },
+            {
+                "name": "Conso-12",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A.h",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C12"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Ewattch",
+                "name": "SQUID Sous-compteur electrique EnOcean - 12 entrées",
+                "doc": "",
+                "type": "Compteur",
+                "ref" : "SQUID-EN",
+                "comlink": "2859-ewattch-squid-sous-compteur-electrique-enocean-12-entrees-3770002148045",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et brancher le squid",
+                "imglink": "a5-12-10_ewattch"
+            }
+        ]
+    }
+}

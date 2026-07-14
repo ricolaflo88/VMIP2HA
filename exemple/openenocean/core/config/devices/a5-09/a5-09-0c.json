@@ -1,0 +1,362 @@
+{
+    "a5-09-0c": {
+        "name": "[A5-09-0c] VOC SensorNG",
+        "groupe" : "[A5-09] Gas sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "09",
+            "type": "0c"
+        },
+        "commands": [
+            {            
+                "name": "Total",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "total"
+            },
+            {            
+                "name": "Formaldehyde",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "formaldehyde"
+            },
+            {            
+                "name": "Benzene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "benzene"
+            },
+            {            
+                "name": "Styrene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "styrene"
+            },
+            {            
+                "name": "Toluene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "toluene"
+            },
+            {            
+                "name": "Tetrachloroethylene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "tetrachloroethylene"
+            },
+            {            
+                "name": "Xylene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "xylene"
+            },
+            {            
+                "name": "n-Hexane",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "n-hexane"
+            },
+            {            
+                "name": "n-Octane",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "n-octane"
+            },
+            {            
+                "name": "Cyclopentane",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "cyclopentane"
+            },
+            {            
+                "name": "Methanol",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "methanol"
+            },
+            {            
+                "name": "Ethanol",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "ethanol"
+            },
+            {            
+                "name": "1-Pentanol",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "1-pentanol"
+            },
+            {            
+                "name": "Acetone",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "acetone"
+            },
+            {            
+                "name": "Ethylene-oxyde",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "ethylene-oxyde"
+            },
+            {            
+                "name": "Acetaldehyde-ue",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "acetaldehyde-ue"
+            },
+            {            
+                "name": "Acetic-acid",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "acetic-acid"
+            },
+            {            
+                "name": "Propionice-acid",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "propionice-acid"
+            },
+            {            
+                "name": "Valeric-acid",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "valeric-acid"
+            },
+            {            
+                "name": "Butyric-acid",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "butyric-acid"
+            },
+            {            
+                "name": "Ammoniac",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "ammoniac"
+            },
+            {            
+                "name": "Hydrogen-sulfide",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "hydrogen-sulfide"
+            },
+            {            
+                "name": "Dimethylsulfide",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "dimethylsulfide"
+            },
+            {            
+                "name": "2-Butanol",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "2-butanol"
+            },
+            {            
+                "name": "2-Methylpropanol",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "2-methylpropanol"
+            },
+            {            
+                "name": "Diethyl-ether",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "diethyl-ether"
+            },
+            {            
+                "name": "Naphtalene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "naphtalene"
+            },
+            {            
+                "name": "4-Phenylcyclohexene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "4-phenylcyclohexene"
+            },
+            {            
+                "name": "Limonene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "limonene"
+            },
+            {            
+                "name": "Trichloroethylene",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "trichloroethylene"
+            },
+            {            
+                "name": "Isovaleric acid",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "isovaleric-acid"
+            },
+            {            
+                "name": "Indole",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "indole"
+            },
+            {            
+                "name": "Cadaverine",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "cadaverine"
+            },
+            {            
+                "name": "Putrescine",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "putrescine"
+            },
+            {            
+                "name": "Caproic acid",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "caproic-acid"
+            },
+            {            
+                "name": "Ozone",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 1,
+                "unite": "ug/m3",
+                "logicalId": "ozone"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nanosense",
+                "name": "Sonde qualité d'air E4000NG",
+                "doc": "",
+                "type": "Qualité d'air",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Mode inclusion auto et mode appairage",
+                "imglink": "a5-09-0c_nanosense_E4000NG_VOC"
+            }
+        ]
+    }
+}

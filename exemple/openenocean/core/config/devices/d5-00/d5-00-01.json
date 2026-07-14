@@ -1,0 +1,154 @@
+{
+    "d5-00-01": {
+        "name": "[D5-00-01] Single Input Contact",
+        "groupe" : "[D5-00] Contacts and Switches",
+        "configuration": {
+            "rorg": "d5",
+            "func": "00",
+            "type": "01",
+            "default": "d5-00/d5-00-01_nodon_ouverture_blanc"
+        },
+        "commands": [
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "OPENING"
+                },
+                "configuration": {
+                    "doNotRepeatEvent": 1
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "CO::raw_value",
+                "template": {
+                    "dashboard": "door",
+                    "mobile": "door"
+                }    
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Nodon",
+                "name": "Capteur d'ouverture blanc",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR1216",
+                "ref" : "SDO-2-1-05",
+                "comlink": "2626-nodon-detecteur-d-ouverture-sans-fils-et-sans-piles-blanc-3700313920138",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_nodon_ouverture_blanc"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Capteur d'ouverture black",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR1216",
+                "ref" : "SDO-2-1-03",
+                "comlink": "2640-nodon-detecteur-d-ouverture-enocean-black-3700313920114",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_nodon_ouverture_black"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Capteur d'ouverture alu",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR1216",
+                "ref" : "SDO-2-1-04",
+                "comlink": "2641-nodon-detecteur-d-ouverture-enocean-alu-3700313920121",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_nodon_ouverture_alu"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Capteur d'ouverture wood",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR1216",
+                "ref" : "SDO-2-1-02",
+                "comlink": "2638-nodon-detecteur-d-ouverture-enocean-wood-3700313920091",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_nodon_ouverture_wood"
+            },
+            {
+                "manufacturer": "Nodon",
+                "name": "Capteur d'ouverture varnish",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR1216",
+                "ref" : "SDO-2-1-01",
+                "comlink": "2639-nodon-detecteur-d-ouverture-enocean-varnish-3700313920107",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_nodon_ouverture_varnish"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Contact de porte/fenêtre - blanc - FTK-RW",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR2032",
+                "ref" : "FTK-RW",
+                "comlink": "3122-eltako-contact-de-portefenetre-blanc-4010312305010",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_eltako_FTK-RW_blanc"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Contact de porte/fenêtre - argent - FTK-SI",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR2032",
+                "ref" : "FTK-SI",
+                "comlink": "3123-eltako-contat-de-portefenetre-argente-4010312305171",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_eltako_FTK-SI_argent"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Contact de porte/fenêtre - anthracite - FTK-AN",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR2032",
+                "ref" : "FTK-AN",
+                "comlink": "3121-eltako-contact-de-portefenetre-anthracite-4010312305164",
+                "remark": "Disponible en plusieurs coloris",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton learn",
+                "imglink": "d5-00-01_eltako_FTK-AN_anthracite"
+            },
+            {
+                "manufacturer": "Avidsen",
+                "name": "Contact de porte/fenêtre",
+                "doc": "",
+                "type": "Ouverture",
+                "battery_type": "1x3V CR2032",
+                "ref" : "",
+                "comlink": "",
+                "inclusion" : "Mode inclusion auto et mise en learn",
+                "imglink": "d5-00-01_avidsen_ouverture"
+            }
+        ]
+    }
+}

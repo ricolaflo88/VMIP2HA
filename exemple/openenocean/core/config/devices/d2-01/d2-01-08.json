@@ -1,0 +1,126 @@
+{
+    "d2-01-08": {
+        "name": "[D2-01-08] Type 08",
+        "groupe" : "[D2-01] Electronic switches and dimmers with Energy Measurement and Local Control",
+        "configuration": {
+            "rorg": "d2",
+            "func": "01",
+            "type": "08"
+        },
+         "commands": [
+            {
+                "name": "On",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "type:switch,command:1,IO:0,OV:100",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Off",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "ENERGY_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "type:switch,command:1,IO:0,OV:0",
+                "template": {
+                    "dashboard": "prise",
+                    "mobile": "prise"
+                }
+            },
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "ENERGY_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "OV::raw_value"
+            },
+            {
+                "name": "Puissance",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "W",
+                "display": {
+                    "generic_type": "POWER"
+                },
+                "logicalId": "P1"
+            },
+            {
+                "name": "Consommation",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "kWh",
+                "display": {
+                    "generic_type": "CONSUMPTION"
+                },
+                "logicalId": "C1"
+            },
+            {
+                "name": "Refresh Puissance",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:1,IO:0"
+            },
+            {
+                "name": "Refresh Consommation",
+                "type": "action",
+                "subtype": "other",
+                "isVisible":0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "command:6,QU:0,IO:0"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Flextron",
+                "name": "ALADIN prise intermédiaire Pro",
+                "doc": "",
+                "type": "Prise",
+                "ref" : "",
+                "comlink": "",
+                "remark": "Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant",
+                "inclusion" : "Mode inclusion auto et triple clic sur le bouton learn",
+                "imglink": "d2-01-08_flextron-aladin-prise"
+            }
+        ]
+    }
+}

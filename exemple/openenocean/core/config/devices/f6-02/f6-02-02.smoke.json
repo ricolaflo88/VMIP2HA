@@ -1,0 +1,54 @@
+{
+    "f6-02-02.smoke": {
+        "name": "[F6-02-02] Light and Blind Control - Application Style 2 - Fumée",
+        "groupe" : "[F6-02] Rocker Switch, 2 Rocker",
+        "configuration": {
+            "rorg": "f6",
+            "func": "02",
+            "type": "02",
+            "ignoreRelease": 0,
+            "allButtons": 0
+        },
+        "commands": [
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "SMOKE",
+                    "invertBinary": "1"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "EB::raw_value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Eltako",
+                "name": "Détecteur de fumée optique EnOcean - FRW-WS",
+                "doc": "",
+                "type": "Fumée",
+                "battery_type": "1x9V CP-V9",
+                "ref" : "FRW-WS",
+                "comlink": "2835-eltako-detecteur-de-fumee-optique-enocean-4010312312308",
+                "remark": "Bien choisir le bon profil après inclusion",
+                "inclusion" : "Mode inclusion auto et appui sur le bouton pour faire sonner",
+                "imglink": "f6-02-02.smoke_eltako_frw"
+            }
+        ]
+    }
+}

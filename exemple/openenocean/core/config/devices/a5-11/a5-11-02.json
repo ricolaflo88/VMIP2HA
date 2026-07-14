@@ -1,0 +1,199 @@
+{
+    "a5-11-02": {
+        "name": "[A5-11-02] Temperature Controller Output",
+        "groupe" : "[A5-11] Controller Status",
+        "configuration": {
+            "rorg": "a5",
+            "func": "11",
+            "type": "02",
+            "twoids": 1
+        },
+        "commands": [
+            {
+                "name": "Consigne",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "TEMPERATURE"
+                },
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "°C",
+                "logicalId": "ASP::value",
+				"template": {
+                "dashboard": "line",
+                "mobile": "line"
+            }
+            },
+            {
+                "name": "Mode",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "logicalId": "CTM::value"
+            },
+			 {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "logicalId": "CTS::value"
+            },
+			 {
+                "name": "Occupancy",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "logicalId": "RO::value"
+            },
+            {
+                "name": "Fanstage",
+                "type": "info",
+                "subtype": "string",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "FAN::value"
+            },
+            {
+                "name": "Control Variable",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "%",
+                "logicalId": "CVAR::value",
+				"template": {
+                "dashboard": "line",
+                "mobile": "line"
+            }
+            },
+			{
+                "name": "Set point tech",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "logicalId": "techsetpoint",
+				"configuration": {
+					"maxValue": 255,
+					"minValue": 0,
+					"linkname": "SP"
+					
+				}
+            },
+            {
+                "name": "Faninfo",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 0,
+                "isHistorized": 0,
+                "logicalId": "FANTECH",
+				"configuration": {
+					"linkname": "FAN"
+				}
+            },
+			{
+                "name": "Fan speed",
+                "type": "action",
+                "subtype": "select",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,profil:A51001,FAN:#select#",
+                "value" : "Faninfo",
+				"configuration": {
+					"linked" :"SP",
+					"updateCmdId": "Fan tech",
+                    "updateCmdToValue": "#select#",
+                    "listValue": "210|Auto;190|Stage 0;165|Stage 1;145|Stage 2;0|Stage 3"
+				}
+            },
+			{
+                "name": "Set point",
+                "type": "action",
+                "subtype": "slider",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,profil:A51001,SP:#slider#",
+				"configuration": {
+					"maxValue": 255,
+					"minValue": 0,
+					"linked" :"FAN",
+					"updateCmdId": "Set point tech",
+                    "updateCmdToValue": "#slider#"
+				}
+            },
+			{
+                "name": "Heat",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,profil:F60201,R1:0,SA:0,T21:1,NU:0,type:switch",
+				"display": {
+                "icon": "<i class=\"icon nature-weather1\"><\/i>"
+				}
+            },
+			{
+                "name": "Cool",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,profil:F60201,R1:2,SA:0,T21:1,NU:0,type:switch",
+				"display": {
+                "icon": "<i class=\"icon nature-snowflake\"><\/i>"
+				}
+            },
+			{
+                "name": "Guest Out On/Off",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,profil:F60201,R1:3,SA:0,T21:1,NU:0,type:switch",
+				"display": {
+                "icon": "<i class=\"icon loisir-runner5\"><\/i>"
+				}
+            },
+			{
+                "name": "Beep On/off",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,profil:F60201,R1:1,SA:0,T21:1,NU:0,type:switch",
+				"display": {
+                "icon": "<i class=\"fa fa-volume-off\"><\/i>"
+				}
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Altecon",
+                "name": "Régulateur de climatisaton/chauffage",
+                "doc": "",
+                "type": "Régulateur",
+                "ref" : "SH324AC",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Inclusion auto puis mettre le module en position jour et placer l'aimant",
+                "imglink": "a5-11-02_altecon_regulateur_de_climatisation"
+            }
+        ]
+    }
+}

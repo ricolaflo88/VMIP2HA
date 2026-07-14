@@ -1,0 +1,59 @@
+{
+    "a5-06-03": {
+        "name": "[A5-06-03] 10bit 0lx to 1000lx",
+        "groupe" : "[A5-06]  Light Sensor",
+        "configuration": {
+            "rorg": "a5",
+            "func": "06",
+            "type": "03"
+        },
+        "commands": [
+            {
+                "name": "Luminosité",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "lx",
+                "logicalId": "ILL",
+                "display": {
+                    "generic_type": "BRIGHTNESS"
+                },
+                "configuration": {
+                    "maxValue": 60000,
+                    "minValue": 300
+                }
+            },
+            {            
+                "name": "Voltage",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 1,
+                "unite": "V",
+                "display": {
+                    "generic_type": "VOLTAGE"
+                },
+                "logicalId": "SVC::value",
+                "configuration": {
+                    "maxValue": 5.1,
+                    "minValue": 0
+                }
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+        ]
+    }
+}

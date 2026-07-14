@@ -1,0 +1,63 @@
+{
+    "f6-02-02.mode_on_off": {
+        "name": "[F6-02-02] Light and Blind Control - Application Style 2 Mode ON/OFF",
+        "groupe" : "[F6-02] Rocker Switch, 2 Rocker",
+        "configuration": {
+            "rorg": "f6",
+            "func": "02",
+            "type": "02",
+            "ignoreRelease": 1,
+            "allButtons": 0
+        },
+        "commands": [
+            {
+                "name": "Bouton A",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_a"
+            },
+            {
+                "name": "Bouton B",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "bt_b"
+            },
+            {
+                "name": "Multiple",
+                "type": "info",
+                "subtype": "string",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "multiple"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ]
+    }
+}

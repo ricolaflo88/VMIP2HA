@@ -1,0 +1,41 @@
+{
+"trame": {
+  "welcome" :
+    {
+      "title": "Bienvenue",
+      "wizard": "welcome",
+      "order": 0,
+      "custom": "",
+      "visible": 1
+    }
+  ,
+  "language" :
+    {
+      "title": "Choix de la langue",
+      "wizard": "language",
+      "order": 1,
+      "custom": "",
+      "visible": 1
+    }
+  ,
+   "vmi" :
+   	{
+	  "title": "Configuration VMI Ventilairsec",
+      "wizard": "vmi",
+      "order": 2,
+      "custom": "",
+      "visible": 1
+   	}
+  ,
+  "ready" :
+    {
+      "title": "Ready to start",
+      "wizard": "ready",
+      "order": 3,
+      "custom": "",
+      "visible": 1
+    }
+
+  },
+  "update": 1
+}

@@ -1,0 +1,141 @@
+{
+    "recepteur_retour_etat_1_canal": {
+        "name": "Récepteur 1 canal avec retour d'état",
+        "groupe" : "[Télécommande] Récepteurs",
+        "configuration": {
+            "rorg": "f6",
+            "func": "02",
+            "type": "02"
+        },
+        "commands": [
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "binary",
+                "display": {
+                    "generic_type": "LIGHT_STATE"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "",
+                "logicalId": "R1::raw_value",
+                "configuration": {
+                    "calculValueOffset": "#value#==3"
+                }
+            },
+            {
+                "name": "On",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_ON"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "generic:1,R1:0,type:switch,T21:1,NU:1",
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            },
+            {
+                "name": "Off",
+                "type": "action",
+                "subtype": "other",
+                "display": {
+                    "generic_type": "LIGHT_OFF"
+                },
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "",
+                "value" : "Etat",
+                "logicalId": "generic:1,R1:1,type:switch,T21:1,NU:1",
+                "template": {
+                    "dashboard": "light",
+                    "mobile": "light"
+                }
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur Enocean télérupteur - FSR61NP-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FSR61NP-230V",
+                "comlink": "3112-eltako-actionneur-enocean-telerupteur-4010312300190",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn en position 40 puis cliquez sur tester ON dans jeedom",
+                "imglink": "recepteur_retour_etat_1_canal_eltako_FSR61NP"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur télérupteur EnOcean - FSR61-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FSR61-230V",
+                "comlink": "3109-eltako-actionneur-telerupteur-enocean-4010312301531",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn en position 40 puis cliquez sur tester ON dans jeedom",
+                "imglink": "recepteur_retour_etat_1_canal_eltako_FSR61"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur EnOcean télérupteur à alimentation en 8 à 24V UC - FSR61/8-24V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FSR61/8-24V",
+                "comlink": "3110-eltako-actionneur-enocean-telerupteur-a-alimentation-en-8-a-24v-uc-4010312301357",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn en position 40 puis cliquez sur tester ON dans jeedom",
+                "imglink": "recepteur_retour_etat_1_canal_eltako_FSR61_8-24"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur Enocean télérupteur - FSR61LN-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FSR61LN-230V",
+                "comlink": "",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn en position 40 puis cliquez sur tester ON dans jeedom",
+                "imglink": "recepteur_retour_etat_1_canal_eltako_FSR61LN"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur EnOcean minuterie d'escalier - FTN61NP-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FTN61NP-230V",
+                "comlink": "3126-eltako-actionneur-enocean-minuterie-d-escalier-4010312300206",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn en position 20 puis cliquez sur tester ON dans jeedom faire de même pour OFF en position 1",
+                "imglink": "recepteur_retour_etat_1_canal_eltako_FTN61NP"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur EnOcean commande de lumière - FLC61NP-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FLC61NP-230V",
+                "comlink": "3099-eltako-actionneur-enocean-commande-de-lumiere-4010312312032",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn en position 60 puis cliquez sur tester ON dans jeedom faire de même pour OFF en position 0",
+                "imglink": "recepteur_retour_etat_1_canal_eltako_FLC61NP"
+            },
+            {
+                "manufacturer": "Eltako",
+                "name": "Prise actionneur - FSSA-230V",
+                "doc": "",
+                "type": "Prise",
+                "ref" : "FSSA-230V",
+                "comlink": "",
+                "remark": "Bien activer le retour d'état sur le module en suivant la documentation du fabricant",
+                "inclusion" : "Mettre jeedom en inclusion et actionner le module. Choisir le profil. Ensuite mettre le module en learn puis cliquez sur tester ON dans jeedom",
+                "imglink": "recepteur_retour_etat_1_canal_eltako_FSSA-230V"
+            }
+        ]
+    }
+}

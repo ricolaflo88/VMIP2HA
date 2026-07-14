@@ -1,0 +1,61 @@
+{
+    "recepteur_volet": {
+        "name": "Récepteur Volet",
+        "groupe" : "[Télécommande] Récepteurs",
+        "configuration": {
+            "rorg": "f6",
+            "func": "02",
+            "type": "02"
+        },
+        "commands": [
+            {
+                "name": "Montée",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,R1:1,type:switch,T21:1,NU:1",
+                "display": {
+                    "icon": "<i class=\"fas fa-arrow-up\"></i>",
+                    "generic_type": "FLAP_UP"
+                }
+            },
+            {
+                "name": "Descente",
+                "type": "action",
+                "subtype": "other",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "generic:1,R1:0,type:switch,T21:1,NU:1",
+                "display": {
+                    "icon": "<i class=\"fas fa-arrow-down\"></i>",
+                    "generic_type": "FLAP_DOWN"
+                }
+            },
+            {
+                "name": "Etat",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "logicalId": "R1::raw_value",
+                "configuration": {
+                "calculValueOffset": "#value# == 2 ? 0 : #value# == 3 ? 100 : 50"
+                }
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "Eltako",
+                "name": "Actionneur radio, commande de stores et rideaux à rouleaux, encastrable FSB61NP-230V",
+                "doc": "",
+                "type": "Micromodule",
+                "ref" : "FSB61NP-230V",
+                "comlink": "1935-eltako-actionneur-radio-commande-de-stores-et-rideaux-a-rouleaux-4010312300213",
+                "remark": "Module qui ne s'inclue pas mais s'appaire. Si le module est en mouvement un appuie sur la direction le stoppera. Bien activer le retour d'état conformément à la documentation du fabricant",
+                "inclusion" : "Ajouter sans inclure. Choisir le profil. Reportez l'id dans le champ Id émission et renseignez l'id du module dans le champ ID (si l'id contient 7 caractères rajouter un 0 devant s'il en contient 6 rajouter 01 devant), après avoir coché la case 'différencier ids' (IMPORTANT). Passez le selecteur de durée sur min. Ensuite mettre le module en learn sur la position 2 puis cliquez sur tester sur la commande montée de Jeedom",
+                "imglink": "recepteur_volet_eltako"
+            }
+        ]
+    }
+}

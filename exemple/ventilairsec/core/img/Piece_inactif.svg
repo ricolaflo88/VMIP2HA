@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Piece_inactif</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Piece_inactif" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-11" transform="translate(1.000000, 1.000000)">
+            <g id="Group-4" transform="translate(0.000000, 0.111111)">
+                <polygon id="Stroke-1" stroke="#000000" fill="#000000" opacity="0.2" points="0.370980392 21.1356161 19.3854902 21.1356161 19.3854902 2.1150774 0.370980392 2.1150774"></polygon>
+                <polygon id="Stroke-1" stroke="#82B1FF" fill="#4D009A" points="2.37098039 19.1356161 21.3854902 19.1356161 21.3854902 0.115077399 2.37098039 0.115077399"></polygon>
+                <path d="M14.4034118,19.1356551 L14.4034118,7.09031995" id="Stroke-3" stroke="#82B1FF"></path>
+            </g>
+            <path d="M14,12.1764706 L8.9598521,12.1764706" id="Stroke-5" stroke="#82B1FF"></path>
+            <g id="Group-10" transform="translate(3.000000, 0.111111)" stroke="#82B1FF">
+                <path d="M-2.22044605e-14,12.0688889 L2.58841629,12.0688889" id="Stroke-6"></path>
+                <path d="M11.2669683,3.38888889 L11.2669683,0.388888889" id="Stroke-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

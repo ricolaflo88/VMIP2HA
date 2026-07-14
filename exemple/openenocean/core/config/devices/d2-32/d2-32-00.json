@@ -1,0 +1,47 @@
+{
+    "d2-32-00": {
+        "name": "[D2-32-00] Type 0x00",
+        "groupe" : "[D2-32] AC current clamp",
+        "configuration": {
+            "rorg": "d2",
+            "func": "32",
+            "type": "00"
+        },
+        "commands": [
+            {
+                "name": "Courant",
+                "type": "info",
+                "subtype": "numeric",
+                "isVisible": 1,
+                "isHistorized": 0,
+                "unite": "A",
+                "logicalId": "CH1::value"
+            },
+            {
+                "name": "dBm",
+                "type": "info",
+                "subtype": "numeric",
+                "display": {
+                    "generic_type": "GENERIC"
+                },
+                "isVisible": 0,
+                "isHistorized": 0,
+                "unite": "dbm",
+                "logicalId": "dBm"
+            }
+        ],
+        "compatibility": [
+            {
+                "manufacturer": "PressacSensing",
+                "name": "Pince Ampérimétrique Enocean",
+                "doc": "",
+                "type": "Courant",
+                "ref" : "",
+                "comlink": "",
+                "remark": "",
+                "inclusion" : "Une fois placé attendre 30 secondes et appuyer sur le bouton",
+                "imglink": "d2-32-00_pressac_1_pince"
+            }
+        ]
+    }
+}

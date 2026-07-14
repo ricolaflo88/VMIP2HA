@@ -1,0 +1,232 @@
+header{
+  display: none;
+}
+body{
+  background: #FFFFFF;
+}
+#div_pageContainer{
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+#div_mainContainer{
+  position: fixed;
+  top : 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.panelVMI_body{
+  top : 0;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  font-family: 'Roboto';
+  background-color: #FFFFFF;
+  color: #323031;
+}
+
+.panelVMI_top{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.panelVMI_top > svg{
+  width: 10%;
+  height: 75%;
+  max-height:50px;
+  margin: 0 5px 0 10px;
+}
+
+.panelVMI_top_jours_valeur{
+  font-size: 30px;
+}
+
+.panelVMI_central{
+  width: 100%;
+  height: 80%;
+  bottom : 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panelVMI_leftAll{
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.circle_div {
+  display:flex;
+  justify-content: flex-end;
+  height: 15px;
+}
+
+.panelVMI_circle {
+  margin: 5px 5px 0 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.panelVMI_div {
+  width: 100%;
+  height: 33.33%;
+  overflow: hidden;
+}
+
+.panelVMI_div_valeur{
+  height: calc(66.66% - 15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panelVMI_div_a_valeur{
+  font-size: 30px;
+}
+.panelVMI_div_a_unite{
+  padding-left: 5px;
+}
+
+.panelVMI_div_title{
+  height: 33.33%;
+  width: 100%;
+  font-size: 16px;
+}
+
+.bypasss_gauge_display {
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bypasss_gauge_display > img {
+  height:85%;
+}
+
+.bypass_gauge {
+  width: 60%;
+  height: 30%;
+  margin: 0 1%;
+  border: solid 1px #4D009A;
+  background-color: #4D009A;
+}
+
+.bypass_gauge div {
+  height: 100%;
+  background-color: white;
+}
+
+.panelVMI_rightAll{
+  width: 50%;
+  height: 100%;
+}
+
+.panelVMI_right_top{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.panelVMI_right_top > svg {
+  width: 20%;
+  max-height:50px;
+  margin: 0 5%;
+}
+
+.panelVMI_right_tree{
+  width: 100%;
+  height: 70%;
+  position: relative;
+}
+
+.panelVMI_right_tree > svg {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Button inactif SVG */
+.buttonInactif{
+  opacity: 0.2;
+}
+/* Button actif */
+.buttonActif{
+  opacity: 1;
+}
+
+.hiddenClass{
+  display: none;
+}
+
+/* ALERT */
+
+.noAlert.panelVMI_in{
+  width: 100%;
+  height: 100%;
+}
+.noAlert.panelVMI_alert{
+  width: 0;
+  height: 0;
+  display: none;
+}
+.Alert.panelVMI_in{
+  width: 100%;
+  height: 85%;
+}
+.Alert.panelVMI_alert{
+  width: 100%;
+  height: 15%;
+}
+
+.panelVMI_alert{
+  background-color: #db4437;
+  color : #FFFFFF;
+  position: relative;
+}
+.spanAlert{
+  color: #FFFFFF;
+}
+.panelVMI_alert_left{
+  float: left;
+  width: 10%;
+  text-align: right;
+  position: absolute;
+  transform: translateY(-50%);
+  top:50%;
+}
+.panelVMI_alert_left > svg{
+  width: 30px;
+  height: 30px;
+}
+.panelVMI_alert_right{
+  margin-left: 11%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 800px) {
+  .bypasss_gauge_display > img {
+    height:40%;
+  }
+}
